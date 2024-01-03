@@ -1,15 +1,21 @@
-import Image from "next/image";
+import { StyledContainer } from "@/design-system/StyledContainer";
+import { StyledImage } from "@/design-system/StyledImage";
+import { StyledHeader } from "@/design-system/StyledHeader";
 
 export default function Header() {
   return (
     <div>
-      <p>Feli</p>
-      <Image
-        src="/neon.jpg"
-        alt="Flur in Neon-Rot und Neon-Pink beleuchtet"
-        width={2880}
-        height={2160}
-      ></Image>
+      <StyledHeader>
+        <p>Feli</p>
+      </StyledHeader>
+      <StyledContainer>
+        <StyledImage
+          src="/rosacloud.jpg"
+          alt="Rosarote Wolkendecke"
+          width={2880}
+          height={2160}
+        ></StyledImage>
+      </StyledContainer>
     </div>
   );
 }
