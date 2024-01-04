@@ -16,6 +16,7 @@ export default function AboveTheFold() {
           alt="Rosarote Wolkendecke"
           width={2880}
           height={2160}
+          priority={true}
         ></StyledImage>
       </StyledContainer>
     </div>

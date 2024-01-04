@@ -19,7 +19,7 @@ export default function Home() {
           href="/favicon-32x32.png"
         />
       </Head>
-      <main className="">
+      <main>
         <div>
           <AboveTheFold />
         </div>
