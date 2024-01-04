@@ -2,7 +2,7 @@ import { StyledContainer } from "@/design-system/StyledContainer";
 import { StyledImage } from "@/design-system/StyledImage";
 import { StyledHeader } from "@/design-system/StyledHeader";
 
-export default function Header() {
+export default function AboveTheFold() {
   return (
     <div>
       <StyledHeader>

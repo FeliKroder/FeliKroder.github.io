@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "@/components/Header";
+import AboveTheFold from "@/components/AboveTheFold";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
       <main className="">
         <div>
-          <Header />
+          <AboveTheFold />
         </div>
       </main>
     </>
