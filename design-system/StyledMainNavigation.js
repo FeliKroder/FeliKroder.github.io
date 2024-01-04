@@ -31,3 +31,8 @@ export const StyledNavigationItem = styled.li`
     padding: 1.6em 0.1em 1.6em 0.1em;
   }
 `;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: var(--text-color);
+`;

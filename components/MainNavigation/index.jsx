@@ -1,4 +1,5 @@
 import {
+  StyledLink,
   StyledNavigationBar,
   StyledNavigationItem,
 } from "@/design-system/StyledMainNavigation";
@@ -9,22 +10,26 @@ export default function MainNavigation() {
       <nav aria-label="Mainnavigation">
         <StyledNavigationBar>
           <StyledNavigationItem>
-            {/* <a> */}
-            {/* <svg></svg> */}
-            <span>Work</span>
-            {/* </a> */}
+            <StyledLink href="/./">
+              {/* <svg></svg> */}
+              <span>Work</span>
+            </StyledLink>
           </StyledNavigationItem>
           <StyledNavigationItem>
-            {/* <a> */}
-            {/* <svg></svg> */}
-            <span>About</span>
-            {/* </a> */}
+            <StyledLink href="/./about">
+              {/* <svg></svg> */}
+              <span>About</span>
+            </StyledLink>
           </StyledNavigationItem>
           <StyledNavigationItem>
-            {/* <a> */}
-            {/* <svg></svg> */}
-            <span>CV</span>
-            {/* </a> */}
+            <StyledLink
+              href="/./FelicitasKroderResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {/* <svg></svg> */}
+              <span>CV</span>
+            </StyledLink>
           </StyledNavigationItem>
         </StyledNavigationBar>
       </nav>
