@@ -6,7 +6,8 @@ export default function App({ Component, pageProps }) {
     <>
       {/* <Layout> */}
       <GlobalStyle />
-      <Component {...pageProps} />;{/* </Layout> */}
+      <Component {...pageProps} />
+      {/* </Layout> */}
     </>
   );
 }

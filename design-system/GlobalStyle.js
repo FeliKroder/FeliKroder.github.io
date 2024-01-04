@@ -7,21 +7,25 @@ const poppins = Poppins({
 });
 
 export const GlobalStyle = createGlobalStyle`
+:root{
+  --primary-color: #ff7b7b;
+  --secondary-color: #ff0000;
+  --accent-color: #ff0065;
+  --accent-color-light: #ffa8b2;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: ${poppins.style.fontFamily};
-  font-size: 16pt;
-  font-weight: 1000;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
 }
 
 body {
-
+  font-family: ${poppins.style.fontFamily};
+  background-color: var(--primary-color);
+  color: #000000
     }
   }
 
