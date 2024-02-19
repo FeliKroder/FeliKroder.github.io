@@ -13,6 +13,6 @@ export const StyledHeader = styled.h2`
   letter-spacing: 0.15em;
 
   @media (max-width: 428px) {
-    padding: 0 0 0 2em;
+    padding: 0 0 0 1.3em;
   }
 `;

@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio von Felicitas Kroder</title>
+        <title>About Felicitas Kroder</title>
         <meta
           name="description"
-          content="Dieses Portfolio ist ein persönliches Projekt und dient zur visuellen Darstellung meiner programmatischen Fähigkeiten"
+          content="Diese Seite gibt eine kurze Übersicht über meine Person"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
