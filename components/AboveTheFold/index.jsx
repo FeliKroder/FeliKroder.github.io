@@ -5,16 +5,11 @@ import {
   StyledOverlayTextBox,
   StyledOverlayTitle,
 } from "@/design-system/StyledImage";
-import { StyledHeader } from "@/design-system/StyledHeader";
-import MainNavigation from "@/components/MainNavigation";
+import Header from "../Header";
 
 export default function AboveTheFold() {
   return (
     <div>
-      <StyledHeader>
-        <p>Feli</p>
-        <MainNavigation></MainNavigation>
-      </StyledHeader>
       <StyledContainer>
         <StyledImage
           src="/rosacloud.jpg"
