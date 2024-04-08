@@ -1,13 +1,11 @@
-// import Layout from "@/pages/_layout";
-import GlobalStyle from "@/design-system/GlobalStyle";
+import Layout from "@/pages/_layout";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Layout> */}
-      <GlobalStyle />
-      <Component {...pageProps} />
-      {/* </Layout> */}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

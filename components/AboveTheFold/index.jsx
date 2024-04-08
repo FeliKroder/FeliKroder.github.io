@@ -1,20 +1,16 @@
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
+  StyledAnimate,
+  StyledArrow,
   StyledImage,
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
 } from "@/design-system/StyledImage";
-import { StyledHeader } from "@/design-system/StyledHeader";
-import MainNavigation from "@/components/MainNavigation";
 
 export default function AboveTheFold() {
   return (
     <div>
-      <StyledHeader>
-        <p>Feli</p>
-        <MainNavigation></MainNavigation>
-      </StyledHeader>
       <StyledContainer>
         <StyledImage
           src="/rosacloud.jpg"
@@ -25,16 +21,25 @@ export default function AboveTheFold() {
         ></StyledImage>
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
-        </StyledOverlayTextBox>
-        <StyledOverlayTextBox>
+          {/* </StyledOverlayTextBox>
+        <StyledOverlayTextBox> */}
           <StyledOverlayText>
-            Vor lange Zeit kam ein smartes Baby in Köln auf die Welt. Genau, das
-            war ich. 19 Jahre später begann ich meine Karriere als
-            vielschichtige Designerin. Weitere 16 Jahre später gehe ich neue
-            Wege, als Webentwicklerin. <br />
-            Ich liebe verspieltes Interaktionsdesign, Minimalismus und
-            glückliche Katzen.
+            Vor langer Zeit kam ein smartes Baby in Köln auf die Welt. Das war
+            ich. 19 Jahre später begann ich eine Karriere als Designerin.
+            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.{" "}
+            <br />
+            Ich legte die Weichen für meinen Berufung als Web Developerin.
           </StyledOverlayText>
+          <StyledOverlayText $isBottomOverlayText>
+            Du möchtest mehr über mich erfahren?
+          </StyledOverlayText>
+          <StyledArrow
+            src="/Arrow_down.svg"
+            alt="Pfeil"
+            width={40}
+            height={40}
+            priority={true}
+          ></StyledArrow>
         </StyledOverlayTextBox>
       </StyledContainer>
     </div>
