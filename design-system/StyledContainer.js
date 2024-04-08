@@ -5,4 +5,6 @@ export const StyledContainer = styled.div`
   justify-content: left;
   align-items: center;
   overflow: hidden;
+  height: 75vh;
+  // border: solid 1px green;
 `;

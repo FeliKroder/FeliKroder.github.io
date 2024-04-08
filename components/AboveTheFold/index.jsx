@@ -5,7 +5,6 @@ import {
   StyledOverlayTextBox,
   StyledOverlayTitle,
 } from "@/design-system/StyledImage";
-import Header from "../Header";
 
 export default function AboveTheFold() {
   return (
@@ -20,15 +19,17 @@ export default function AboveTheFold() {
         ></StyledImage>
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
-        </StyledOverlayTextBox>
-        <StyledOverlayTextBox>
+          {/* </StyledOverlayTextBox>
+        <StyledOverlayTextBox> */}
           <StyledOverlayText>
-            Vor lange Zeit kam ein smartes Baby in Köln auf die Welt. Genau, das
-            war ich. 19 Jahre später begann ich meine Karriere als
-            vielschichtige Designerin. Weitere 16 Jahre später gehe ich neue
-            Wege, als Webentwicklerin. <br />
-            Ich liebe verspieltes Interaktionsdesign, Minimalismus und
-            glückliche Katzen.
+            Vor langer Zeit kam ein smartes, kölsches Baby auf die Welt. Das war
+            ich. Mit 19 begann ich eine Karriere als holistische Designerin. Mit
+            mitte 30 wagte ich endlich den Sprung ins kalte Wasser. <br />
+            Ich legte die ersten Weichen für meine neue Karriere als Web
+            Developerin.
+          </StyledOverlayText>
+          <StyledOverlayText $isBottomOverlayText>
+            Du möchtest mehr über mich erfahren?
           </StyledOverlayText>
         </StyledOverlayTextBox>
       </StyledContainer>

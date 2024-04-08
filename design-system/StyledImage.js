@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const StyledImage = styled(Image)`
-  position: relative;
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -10,41 +9,49 @@ export const StyledImage = styled(Image)`
 `;
 
 export const StyledOverlayTextBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   // border: solid red 1px;
 `;
 
 export const StyledOverlayText = styled.p`
   text-align: center;
-  padding: 2em 13em 0 13em;
+  padding: 0 1.3em 0 1.3em;
+  padding-bottom: ${({ $isBottomOverlayText }) =>
+    $isBottomOverlayText ? "0" : "4em"};
   font-weight: 450;
   letter-spacing: 0.08em;
   line-height: 180%;
+
+  max-width: 60em;
+  // min-width:
   // border: solid blue 1px;
 
-  @media (max-width: 928px) {
-    padding: 0 2em 2em 2em;
-  }
-  @media (max-width: 428px) {
-    padding: 2em 1.6em 0 1.6em;
-  }
+  // @media (max-width: 928px) {
+  //   padding: 0 2em 2em 2em;
+  // }
+  // @media (max-width: 428px) {
+  //   padding: 2em 1.6em 0 1.6em;
+  // }
 `;
 
 export const StyledOverlayTitle = styled.h2`
   width: 100%;
   text-align: center;
-  padding: 0 0 5em 0;
+  padding: 0 0 0.5em 0;
   font-weight: bold;
   font-size: 2.8em;
   // border: solid green 2px;
 
-  @media (max-width: 928px) {
-    line-break: strict;
-    font-size: 2.4em;
-    padding: 0 0 9em 0;
-  }
-  @media (max-width: 428px) {
-    padding: 0 0 10em 0;
-  }
+  // @media (max-width: 928px) {
+  //   line-break: strict;
+  //   font-size: 2.4em;
+  //   padding: 0 0 9em 0;
+  // }
+  // @media (max-width: 428px) {
+  //   padding: 0 0 10em 0;
+  // }
 `;
