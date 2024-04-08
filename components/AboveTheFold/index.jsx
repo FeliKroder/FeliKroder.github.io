@@ -1,5 +1,7 @@
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
+  StyledAnimate,
+  StyledArrow,
   StyledImage,
   StyledOverlayText,
   StyledOverlayTextBox,
@@ -22,15 +24,22 @@ export default function AboveTheFold() {
           {/* </StyledOverlayTextBox>
         <StyledOverlayTextBox> */}
           <StyledOverlayText>
-            Vor langer Zeit kam ein smartes, kölsches Baby auf die Welt. Das war
-            ich. Mit 19 begann ich eine Karriere als holistische Designerin. Mit
-            mitte 30 wagte ich endlich den Sprung ins kalte Wasser. <br />
-            Ich legte die ersten Weichen für meine neue Karriere als Web
-            Developerin.
+            Vor langer Zeit kam ein smartes Baby in Köln auf die Welt. Das war
+            ich. 19 Jahre später begann ich eine Karriere als Designerin.
+            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.{" "}
+            <br />
+            Ich legte die Weichen für meinen Berufung als Web Developerin.
           </StyledOverlayText>
           <StyledOverlayText $isBottomOverlayText>
             Du möchtest mehr über mich erfahren?
           </StyledOverlayText>
+          <StyledArrow
+            src="/Arrow_down.svg"
+            alt="Pfeil"
+            width={40}
+            height={40}
+            priority={true}
+          ></StyledArrow>
         </StyledOverlayTextBox>
       </StyledContainer>
     </div>

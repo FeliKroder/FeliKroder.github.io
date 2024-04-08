@@ -25,17 +25,8 @@ export const StyledOverlayText = styled.p`
   font-weight: 450;
   letter-spacing: 0.08em;
   line-height: 180%;
-
-  max-width: 60em;
-  // min-width:
+  max-width: 59em;
   // border: solid blue 1px;
-
-  // @media (max-width: 928px) {
-  //   padding: 0 2em 2em 2em;
-  // }
-  // @media (max-width: 428px) {
-  //   padding: 2em 1.6em 0 1.6em;
-  // }
 `;
 
 export const StyledOverlayTitle = styled.h2`
@@ -45,13 +36,20 @@ export const StyledOverlayTitle = styled.h2`
   font-weight: bold;
   font-size: 2.8em;
   // border: solid green 2px;
+`;
 
-  // @media (max-width: 928px) {
-  //   line-break: strict;
-  //   font-size: 2.4em;
-  //   padding: 0 0 9em 0;
-  // }
-  // @media (max-width: 428px) {
-  //   padding: 0 0 10em 0;
-  // }
+export const StyledArrow = styled(Image)`
+  margin-top: 1em;
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  animation: jump 1.2s infinite;
 `;
