@@ -1,11 +1,25 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const StyledImage = styled(Image)`
+export const StyledMood = styled(Image)`
   width: 100%;
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const StyledItem = styled(Image)`
+  width: 40vw;
+  height: 40vw;
+  ${({ $isSmallItem }) =>
+    $isSmallItem &&
+    css`
+      width: 20vw;
+      height: 20vw;
+    `};
+  object-fit: cover;
+  border-radius: 4em;
+  box-shadow: 20px 20px 40px 2px var(--primary-color-light);
 `;
 
 export const StyledOverlayTextBox = styled.div`
@@ -14,7 +28,6 @@ export const StyledOverlayTextBox = styled.div`
   flex-direction: column;
   position: fixed;
   width: 100vw;
-  // border: solid red 1px;
 `;
 
 export const StyledOverlayText = styled.p`
@@ -26,7 +39,6 @@ export const StyledOverlayText = styled.p`
   letter-spacing: 0.08em;
   line-height: 180%;
   max-width: 59em;
-  // border: solid blue 1px;
 `;
 
 export const StyledOverlayTitle = styled.h2`
@@ -35,7 +47,6 @@ export const StyledOverlayTitle = styled.h2`
   padding: 0 0 0.5em 0;
   font-weight: bold;
   font-size: 2.8em;
-  // border: solid green 2px;
 `;
 
 export const StyledArrow = styled(Image)`

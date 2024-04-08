@@ -1,8 +1,7 @@
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
-  StyledAnimate,
   StyledArrow,
-  StyledImage,
+  StyledMood,
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
@@ -12,13 +11,13 @@ export default function AboveTheFold() {
   return (
     <div>
       <StyledContainer>
-        <StyledImage
+        <StyledMood
           src="/rosacloud.jpg"
           alt="Rosarote Wolkendecke"
           width={2880}
           height={2160}
           priority={true}
-        ></StyledImage>
+        ></StyledMood>
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
           {/* </StyledOverlayTextBox>

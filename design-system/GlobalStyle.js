@@ -9,6 +9,7 @@ const poppins = Poppins({
 export const GlobalStyle = createGlobalStyle`
 :root{
   --primary-color: #ff7b7b;
+  --primary-color-light: #ff6b7b;
   --secondary-color: #ff0000;
   --accent-color: #ff0065;
   --accent-color-light: #ffa8b2;

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AboveTheFold from "@/components/AboveTheFold";
+import { StyledItem } from "@/design-system/StyledImage";
 
 export default function Home() {
   return (
@@ -20,9 +20,26 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div>
-          <AboveTheFold />
-        </div>
+        <p>Feli's Karriere Bausatz</p>
+        <p>
+          Du möchtest mehr über mich erfahren? Hover auf jedes Element und mein
+          Karriere Bausatz wird dir mehr über mich erzählen!
+        </p>
+        <StyledItem
+          src="/rosacloud.jpg"
+          alt="Rosarote Wolkendecke"
+          width={50}
+          height={50}
+          priority={true}
+        ></StyledItem>
+        <StyledItem
+          // $isSmallItem
+          src="/rosacloud.jpg"
+          alt="Rosarote Wolkendecke"
+          width={50}
+          height={50}
+          priority={true}
+        ></StyledItem>
       </main>
     </>
   );
