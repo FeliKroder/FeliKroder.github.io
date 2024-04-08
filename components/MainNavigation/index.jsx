@@ -1,8 +1,8 @@
 import {
-  StyledLink,
   StyledNavigationBar,
   StyledNavigationItem,
 } from "@/design-system/StyledMainNavigation";
+import { StyledLink } from "@/design-system/StyledLink";
 
 export default function MainNavigation() {
   return (
@@ -10,7 +10,7 @@ export default function MainNavigation() {
       <nav aria-label="Mainnavigation">
         <StyledNavigationBar>
           <StyledNavigationItem>
-            <StyledLink href="/./">
+            <StyledLink href="/.">
               {/* <svg></svg> */}
               <span>Work</span>
             </StyledLink>
