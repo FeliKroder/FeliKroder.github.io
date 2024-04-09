@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
 
 export const StyledMood = styled(Image)`
@@ -6,20 +6,6 @@ export const StyledMood = styled(Image)`
   max-width: 100%;
   height: 100%;
   object-fit: cover;
-`;
-
-export const StyledItem = styled(Image)`
-  width: 40vw;
-  height: 40vw;
-  ${({ $isSmallItem }) =>
-    $isSmallItem &&
-    css`
-      width: 20vw;
-      height: 20vw;
-    `};
-  object-fit: cover;
-  border-radius: 4em;
-  box-shadow: 20px 20px 40px 2px var(--primary-color-light);
 `;
 
 export const StyledOverlayTextBox = styled.div`

@@ -20,12 +20,10 @@ export default function AboveTheFold() {
         ></StyledMood>
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
-          {/* </StyledOverlayTextBox>
-        <StyledOverlayTextBox> */}
           <StyledOverlayText>
             Vor langer Zeit kam ein smartes Baby in Köln auf die Welt. Das war
             ich. 19 Jahre später begann ich eine Karriere als Designerin.
-            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.{" "}
+            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.
             <br />
             Ich legte die Weichen für meinen Berufung als Web Developerin.
           </StyledOverlayText>

@@ -1,5 +1,10 @@
 import Head from "next/head";
-import { StyledItem } from "@/design-system/StyledImage";
+import {
+  StyledItem,
+  StyledItemBox,
+  StyledItemContainer,
+  StyledWerkzeugkasten,
+} from "@/design-system/StyledWerkzeugkasten";
 
 export default function Home() {
   return (
@@ -20,26 +25,64 @@ export default function Home() {
         />
       </Head>
       <main>
-        <p>Feli's Karriere Bausatz</p>
+        <p>Feli's Werkzeugkasten</p>
         <p>
-          Du möchtest mehr über mich erfahren? Hover auf jedes Element und mein
-          Karriere Bausatz wird dir mehr über mich erzählen!
+          Du möchtest mehr über mich erfahren? Hover auf die Elemente und mein
+          Werkzeugkasten erzählt dir etwas über mich!
         </p>
-        <StyledItem
-          src="/rosacloud.jpg"
-          alt="Rosarote Wolkendecke"
-          width={50}
-          height={50}
-          priority={true}
-        ></StyledItem>
-        <StyledItem
-          // $isSmallItem
-          src="/rosacloud.jpg"
-          alt="Rosarote Wolkendecke"
-          width={50}
-          height={50}
-          priority={true}
-        ></StyledItem>
+        <StyledWerkzeugkasten>
+          <StyledItemBox>
+            <StyledItemContainer>
+              <StyledItem
+                src="/rosacloud.jpg"
+                alt="Rosarote Wolkendecke"
+                width={50}
+                height={50}
+                priority={true}
+              ></StyledItem>
+            </StyledItemContainer>
+            <StyledItemContainer $isWideItemContainer>
+              <StyledItem
+                $isWideItem
+                src="/rosacloud.jpg"
+                alt="Rosarote Wolkendecke"
+                width={50}
+                height={50}
+                priority={true}
+              ></StyledItem>
+            </StyledItemContainer>
+            <StyledItemContainer $isSmallItemContainer>
+              <StyledItem
+                $isSmallItem
+                src="/rosacloud.jpg"
+                alt="Rosarote Wolkendecke"
+                width={50}
+                height={50}
+                priority={true}
+              ></StyledItem>
+            </StyledItemContainer>
+            <StyledItemContainer $isSmallItemContainer>
+              <StyledItem
+                $isSmallItem
+                src="/rosacloud.jpg"
+                alt="Rosarote Wolkendecke"
+                width={50}
+                height={50}
+                priority={true}
+              ></StyledItem>
+            </StyledItemContainer>
+            <StyledItemContainer $isSmallItemContainer>
+              <StyledItem
+                $isSmallItem
+                src="/rosacloud.jpg"
+                alt="Rosarote Wolkendecke"
+                width={50}
+                height={50}
+                priority={true}
+              ></StyledItem>
+            </StyledItemContainer>
+          </StyledItemBox>
+        </StyledWerkzeugkasten>
       </main>
     </>
   );
