@@ -6,17 +6,19 @@ export const StyledWerkzeugkasten = styled.div`
   justify-content: center;
   width: 100vw;
   height: 90vh;
+  padding: 100px 0 0 0;
   //   border: solid 10px blue;
 `;
 
 export const StyledItemBox = styled.div`
-  width: 600px;
+  width: 580px;
   display: flex;
   gap: 20px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   //   border: solid 5px pink;
 `;
 
@@ -29,9 +31,9 @@ export const StyledItemContainer = styled.div`
   max-width: 380px;
   max-height: 380px;
   border-radius: 3.5em;
-  background-color: var(--accent-color);
-  box-shadow: 20px 20px 10px 2px var(--primary-color-light);
-
+  background-color: var(--primary-color);
+  box-shadow: 10px 10px 10px 10px gray;
+  box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
   ${({ $isWideItemContainer }) =>
     $isWideItemContainer &&
     css`
@@ -63,14 +65,13 @@ export const StyledItem = styled(Image)`
   max-width: 360px;
   max-height: 360px;
   border-radius: 3em;
-  background-color: var(--accent-color);
-  object-fit: cover;
+  object-fit: contain;
 
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      width: 42vw;
-      height: 21vw;
+      width: 44vw;
+      height: 23vw;
       min-width: 180px;
       min-height: 90px;
       max-width: 380px;
@@ -79,8 +80,8 @@ export const StyledItem = styled(Image)`
   ${({ $isSmallItem }) =>
     $isSmallItem &&
     css`
-      width: 19.5vw;
-      height: 19.5vw;
+      width: 21vw;
+      height: 21vw;
       min-width: 90px;
       min-height: 90px;
       max-width: 180px;

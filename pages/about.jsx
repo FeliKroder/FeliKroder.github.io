@@ -1,10 +1,19 @@
 import Head from "next/head";
+import { StyledContainer } from "@/design-system/StyledContainer";
 import {
   StyledItem,
   StyledItemBox,
   StyledItemContainer,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
+
+import {
+  StyledOverlayText,
+  StyledOverlayTextBox,
+  StyledOverlayTitle,
+} from "@/design-system/StyledText";
+
+import { StyledLamp } from "@/design-system/StyledImage";
 
 export default function Home() {
   return (
@@ -25,17 +34,30 @@ export default function Home() {
         />
       </Head>
       <main>
-        <p>Feli's Werkzeugkasten</p>
-        <p>
-          Du möchtest mehr über mich erfahren? Hover auf die Elemente und mein
-          Werkzeugkasten erzählt dir etwas über mich!
-        </p>
+        <StyledContainer $isAbout>
+          <StyledOverlayTextBox>
+            <StyledLamp
+              src="/neon.jpg"
+              alt="Lampe"
+              width={40}
+              height={40}
+              priority={true}
+            ></StyledLamp>
+            <StyledOverlayTitle $isAbout>
+              Feli's Werkzeugkasten
+            </StyledOverlayTitle>
+            <StyledOverlayText $isAbout>
+              Du möchtest mehr über mich erfahren? Hover über die Elemente. Mein
+              Werkzeugkasten erzählt dir etwas über mich!
+            </StyledOverlayText>
+          </StyledOverlayTextBox>
+        </StyledContainer>
         <StyledWerkzeugkasten>
           <StyledItemBox>
             <StyledItemContainer>
               <StyledItem
-                src="/rosacloud.jpg"
-                alt="Rosarote Wolkendecke"
+                src="/Gehirn.png"
+                alt="Gehirn"
                 width={50}
                 height={50}
                 priority={true}
@@ -44,8 +66,8 @@ export default function Home() {
             <StyledItemContainer $isWideItemContainer>
               <StyledItem
                 $isWideItem
-                src="/rosacloud.jpg"
-                alt="Rosarote Wolkendecke"
+                src="/Gehirn.png"
+                alt="Gehirn"
                 width={50}
                 height={50}
                 priority={true}
@@ -54,8 +76,8 @@ export default function Home() {
             <StyledItemContainer $isSmallItemContainer>
               <StyledItem
                 $isSmallItem
-                src="/rosacloud.jpg"
-                alt="Rosarote Wolkendecke"
+                src="/Herz.png"
+                alt="Anatomisches Herz"
                 width={50}
                 height={50}
                 priority={true}
@@ -64,8 +86,8 @@ export default function Home() {
             <StyledItemContainer $isSmallItemContainer>
               <StyledItem
                 $isSmallItem
-                src="/rosacloud.jpg"
-                alt="Rosarote Wolkendecke"
+                src="/Gehirn.png"
+                alt="Gehirn"
                 width={50}
                 height={50}
                 priority={true}
@@ -74,8 +96,8 @@ export default function Home() {
             <StyledItemContainer $isSmallItemContainer>
               <StyledItem
                 $isSmallItem
-                src="/rosacloud.jpg"
-                alt="Rosarote Wolkendecke"
+                src="/Gehirn.png"
+                alt="Gehirn"
                 width={50}
                 height={50}
                 priority={true}

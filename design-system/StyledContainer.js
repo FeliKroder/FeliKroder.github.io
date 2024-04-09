@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: center;
+  // align-items: center;
   overflow: hidden;
-  height: 75vh;
+
+  height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "75vh")};
+  align-items: ${({ $isAbout }) => ($isAbout ? "flex-start" : "center")};
   // border: solid 1px green;
 `;

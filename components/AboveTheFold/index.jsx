@@ -1,11 +1,10 @@
 import { StyledContainer } from "@/design-system/StyledContainer";
+import { StyledArrow, StyledMood } from "@/design-system/StyledImage";
 import {
-  StyledArrow,
-  StyledMood,
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
-} from "@/design-system/StyledImage";
+} from "@/design-system/StyledText";
 
 export default function AboveTheFold() {
   return (
