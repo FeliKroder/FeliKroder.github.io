@@ -4,14 +4,15 @@ import Image from "next/image";
 export const StyledWerkzeugkasten = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 90vh;
-  padding: 100px 0 0 0;
-  //   border: solid 10px blue;
+  width: auto;
+  height: 90%;
+  margin: 14em 0 10em 0;
+  // border: solid 1px blue;
 `;
 
 export const StyledItemBox = styled.div`
-  width: 580px;
+  width: 590px;
+  height: 590px;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -19,7 +20,7 @@ export const StyledItemBox = styled.div`
   justify-content: center;
   align-items: center;
 
-  //   border: solid 5px pink;
+  // border: solid 5px pink;
 `;
 
 export const StyledItemContainer = styled.div`
@@ -32,7 +33,6 @@ export const StyledItemContainer = styled.div`
   max-height: 380px;
   border-radius: 3.5em;
   background-color: var(--primary-color);
-  box-shadow: 10px 10px 10px 10px gray;
   box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
   ${({ $isWideItemContainer }) =>
     $isWideItemContainer &&
@@ -60,31 +60,31 @@ export const StyledItem = styled(Image)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 42vw;
-  height: 42vw;
-  max-width: 360px;
-  max-height: 360px;
-  border-radius: 3em;
+  width: 30vw;
+  height: 32vw;
+  max-width: 260px;
+  max-height: 260px;
   object-fit: contain;
+  // border: solid 2px green;
 
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      width: 44vw;
-      height: 23vw;
+      width: 28vw;
+      height: 13vw;
       min-width: 180px;
       min-height: 90px;
-      max-width: 380px;
-      max-height: 190px;
+      max-width: 250px;
+      max-height: 90px;
     `};
   ${({ $isSmallItem }) =>
     $isSmallItem &&
     css`
-      width: 21vw;
-      height: 21vw;
+      width: 15vw;
+      height: 15vw;
       min-width: 90px;
       min-height: 90px;
-      max-width: 180px;
-      max-height: 180px;
+      max-width: 130px;
+      max-height: 130px;
     `};
 `;

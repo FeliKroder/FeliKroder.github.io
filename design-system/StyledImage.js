@@ -3,8 +3,10 @@ import Image from "next/image";
 
 export const StyledMood = styled(Image)`
   width: 100%;
-  max-width: 100%;
-  height: 100%;
+  // max-width: 100%
+  // min-height: 29vw;
+  height: 44em;
+  // max-height: 69vw;
   object-fit: cover;
 `;
 
@@ -26,4 +28,12 @@ export const StyledArrow = styled(Image)`
 
 export const StyledLamp = styled(Image)`
   margin: 4.5em 0 0.3em 0;
+
+  ${({ $isContact }) =>
+    $isContact &&
+    css`
+      position: fixed;
+      bottom: 170px;
+      right: 30px;
+    `}
 `;

@@ -6,13 +6,11 @@ import {
   StyledItemContainer,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
-
 import {
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
 } from "@/design-system/StyledText";
-
 import { StyledLamp } from "@/design-system/StyledImage";
 
 export default function Home() {
@@ -35,7 +33,7 @@ export default function Home() {
       </Head>
       <main>
         <StyledContainer $isAbout>
-          <StyledOverlayTextBox>
+          <StyledOverlayTextBox $isAbout>
             <StyledLamp
               src="/neon.jpg"
               alt="Lampe"
@@ -52,59 +50,61 @@ export default function Home() {
             </StyledOverlayText>
           </StyledOverlayTextBox>
         </StyledContainer>
-        <StyledWerkzeugkasten>
-          <StyledItemBox>
-            <StyledItemContainer>
-              <StyledItem
-                src="/Gehirn.png"
-                alt="Gehirn"
-                width={50}
-                height={50}
-                priority={true}
-              ></StyledItem>
-            </StyledItemContainer>
-            <StyledItemContainer $isWideItemContainer>
-              <StyledItem
-                $isWideItem
-                src="/Gehirn.png"
-                alt="Gehirn"
-                width={50}
-                height={50}
-                priority={true}
-              ></StyledItem>
-            </StyledItemContainer>
-            <StyledItemContainer $isSmallItemContainer>
-              <StyledItem
-                $isSmallItem
-                src="/Herz.png"
-                alt="Anatomisches Herz"
-                width={50}
-                height={50}
-                priority={true}
-              ></StyledItem>
-            </StyledItemContainer>
-            <StyledItemContainer $isSmallItemContainer>
-              <StyledItem
-                $isSmallItem
-                src="/Gehirn.png"
-                alt="Gehirn"
-                width={50}
-                height={50}
-                priority={true}
-              ></StyledItem>
-            </StyledItemContainer>
-            <StyledItemContainer $isSmallItemContainer>
-              <StyledItem
-                $isSmallItem
-                src="/Gehirn.png"
-                alt="Gehirn"
-                width={50}
-                height={50}
-                priority={true}
-              ></StyledItem>
-            </StyledItemContainer>
-          </StyledItemBox>
-        </StyledWerkzeugkasten>
+        <StyledContainer>
+          <StyledWerkzeugkasten>
+            <StyledItemBox>
+              <StyledItemContainer>
+                <StyledItem
+                  src="/brain-red.png"
+                  alt="Gehirn"
+                  width={4882}
+                  height={4882}
+                  priority={true}
+                ></StyledItem>
+              </StyledItemContainer>
+              <StyledItemContainer $isWideItemContainer>
+                <StyledItem
+                  $isWideItem
+                  src="/Tea.png"
+                  alt="Tee"
+                  width={4882}
+                  height={1692}
+                  priority={true}
+                ></StyledItem>
+              </StyledItemContainer>
+              <StyledItemContainer $isSmallItemContainer>
+                <StyledItem
+                  $isSmallItem
+                  src="/Heart.png"
+                  alt="Anatomisches Herz"
+                  width={4882}
+                  height={4882}
+                  priority={true}
+                ></StyledItem>
+              </StyledItemContainer>
+              <StyledItemContainer $isSmallItemContainer>
+                <StyledItem
+                  $isSmallItem
+                  src="/Brokkoli-pink.png"
+                  alt="Brokkoli"
+                  width={4882}
+                  height={4882}
+                  priority={true}
+                ></StyledItem>
+              </StyledItemContainer>
+              <StyledItemContainer $isSmallItemContainer>
+                <StyledItem
+                  $isSmallItem
+                  src="/Computer.png"
+                  alt="Computer"
+                  width={4882}
+                  height={4882}
+                  priority={true}
+                ></StyledItem>
+              </StyledItemContainer>
+            </StyledItemBox>
+          </StyledWerkzeugkasten>
+        </StyledContainer>
       </main>
     </>
   );

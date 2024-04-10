@@ -4,9 +4,9 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   // align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 
-  height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "75vh")};
-  align-items: ${({ $isAbout }) => ($isAbout ? "flex-start" : "center")};
+  height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "80vh")};
+  min-height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "94vh")};
   // border: solid 1px green;
 `;
