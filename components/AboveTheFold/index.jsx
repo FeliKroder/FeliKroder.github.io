@@ -1,32 +1,28 @@
 import { StyledContainer } from "@/design-system/StyledContainer";
+import { StyledArrow, StyledMood } from "@/design-system/StyledImage";
 import {
-  StyledAnimate,
-  StyledArrow,
-  StyledImage,
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
-} from "@/design-system/StyledImage";
+} from "@/design-system/StyledText";
 
 export default function AboveTheFold() {
   return (
     <div>
       <StyledContainer>
-        <StyledImage
+        <StyledMood
           src="/rosacloud.jpg"
           alt="Rosarote Wolkendecke"
           width={2880}
           height={2160}
           priority={true}
-        ></StyledImage>
+        ></StyledMood>
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
-          {/* </StyledOverlayTextBox>
-        <StyledOverlayTextBox> */}
           <StyledOverlayText>
             Vor langer Zeit kam ein smartes Baby in Köln auf die Welt. Das war
             ich. 19 Jahre später begann ich eine Karriere als Designerin.
-            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.{" "}
+            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.
             <br />
             Ich legte die Weichen für meinen Berufung als Web Developerin.
           </StyledOverlayText>

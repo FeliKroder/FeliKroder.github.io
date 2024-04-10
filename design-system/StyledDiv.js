@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const StyledDiv = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  height: 90px;
-  padding: 2em 0 0 4em;
+  justify-content: space-between;
+  height: 70px;
+  padding: 1.4em 0 0 4em;
+  margin: 6.5em 0 0 0;
+  background-color: var(--accent-color-medium);
 
   @media (max-width: 428px) {
     height: 60px;

@@ -1,11 +1,14 @@
 import { StyledHeader } from "@/design-system/StyledHeader";
 import MainNavigation from "../MainNavigation";
+import { StyledLink } from "@/design-system/StyledLink";
 
 export default function Header() {
   return (
     <>
       <StyledHeader>
-        <p>Feli</p>
+        <StyledLink href="/">
+          <p>Feli</p>
+        </StyledLink>
         <MainNavigation></MainNavigation>
       </StyledHeader>
     </>
