@@ -1,21 +1,14 @@
 import styled, { css } from "styled-components";
 
-// export const StyledContactButton = styled.button`
-//   text-decoration: none;
-//   color: var(--text-color);
-//   // border: green solid 2px;
-//   position: fixed;
-//   bottom: 120px;
-//   right: 40px;
-// `;
-
 export const StyledModal = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--accent-color-light);
+  background-color: rgba(1, 1, 1, 0.32);
+  backdrop-filter: blur(10px);
+  // opacity: 0.33;
 `;
 
 export const StyledModalContent = styled.div`

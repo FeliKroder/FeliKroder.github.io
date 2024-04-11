@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
   --accent-color-medium: #ef8f8f;
   --accent-color-light: #ffa8b2;
   --text-color:#000000;
+  --text-color-light:#ffffff;
+
 }
 
 *,

@@ -1,5 +1,4 @@
 import { StyledContactButton } from "@/design-system/StyledImage";
-import { StyledLamp } from "@/design-system/StyledImage";
 import {
   StyledModal,
   StyledModalContent,
@@ -43,7 +42,7 @@ export default function ConfirmModal({}) {
         priority={true}
       ></StyledContactButton>
       {showModal && (
-        <StyledModal>
+        <StyledModal onClick={handleOuterClick}>
           <StyledModalContent>
             <StyledModalButton
               type="reset"
