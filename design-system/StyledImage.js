@@ -28,12 +28,24 @@ export const StyledArrow = styled(Image)`
 
 export const StyledLamp = styled(Image)`
   margin: 4.5em 0 0.3em 0;
+`;
 
-  ${({ $isContact }) =>
-    $isContact &&
-    css`
-      position: fixed;
-      bottom: 170px;
-      right: 30px;
-    `}
+export const StyledContactButton = styled(Image)`
+  width: 70px;
+  height: 70px;
+  padding: 0.7em;
+  text-decoration: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  object-fit: contain;
+  background-color: var(--secondary-color);
+  border-radius: 2em;
+  box-shadow: 4px 4px 15px var(--secondary-color), 0.3;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: var(--accent-color);
+  }
 `;

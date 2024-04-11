@@ -66,7 +66,8 @@ export const StyledItem = styled(Image)`
   max-height: 260px;
   object-fit: contain;
   // border: solid 2px green;
-
+  filter: drop-shadow(-30px 30px 6px rgb(0, 0, 0, 0.07));
+  // filter: hue-rotate(15deg) brightness(110%);
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
@@ -76,6 +77,7 @@ export const StyledItem = styled(Image)`
       min-height: 90px;
       max-width: 250px;
       max-height: 90px;
+      filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
     `};
   ${({ $isSmallItem }) =>
     $isSmallItem &&
@@ -86,5 +88,6 @@ export const StyledItem = styled(Image)`
       min-height: 90px;
       max-width: 130px;
       max-height: 130px;
+      filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
     `};
 `;
