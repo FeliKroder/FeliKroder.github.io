@@ -3,11 +3,13 @@ import { StyledDiv } from "@/design-system/StyledDiv";
 import { StyledLink } from "@/design-system/StyledLink";
 import { StyledLamp } from "@/design-system/StyledImage";
 import Link from "next/link";
+import ContactForm from "../ContactForm";
 
 export default function Footer() {
   return (
     <>
       <Link href="/" $isContact>
+        <ContactForm></ContactForm>
         <StyledLamp
           $isContact
           src="/Arrow_down.svg"
