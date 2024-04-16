@@ -80,6 +80,23 @@ export const StyledItemBox = styled.div`
       height: 150px;
     `};
 
+  ${({ $isAboutItem }) =>
+    $isAboutItem &&
+    css`
+      // grid-area: secondSmall;
+      box-shadow: none;
+
+      &:hover,
+      &:active {
+        width: 240px;
+        height: 150px;
+        box-shadow: none;
+        background-color: transparent;
+        border: solid 2px var(--secondary-color);
+        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      }
+    `};
+
   @media (max-width: 670px) {
     width: 220px;
     height: 220px;

@@ -8,8 +8,8 @@ export const StyledDiv = styled.div`
   // margin: 3em 0 0 0;
   background-color: var(--accent-color-medium);
 
-  ${({ $isAbout }) =>
-    $isAbout &&
+  ${({ $isAboutFooter }) =>
+    $isAboutFooter &&
     css`
       height: 1px;
       background-color: var(--premium-color);

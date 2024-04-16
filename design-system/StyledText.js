@@ -55,7 +55,7 @@ export const StyledOverlayText = styled.p`
   letter-spacing: 0.08em;
   line-height: 180%;
   width: 100vw;
-  max-width: 38em;
+  max-width: 60em;
 
   // border: solid red 2px;
 
@@ -65,6 +65,7 @@ export const StyledOverlayText = styled.p`
       padding: 0 1.3em 2em 1.3em;
       font-size: 0.9em;
       letter-spacing: 0.04em;
+      max-width: 38em;
     `};
 
   @media (max-width: 670px) {

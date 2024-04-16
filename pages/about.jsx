@@ -106,7 +106,8 @@ export default function Home() {
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
-        <StyledDiv $isAbout></StyledDiv>
+        <StyledItemBox $isAboutItem></StyledItemBox>
+        <StyledDiv $isAboutFooter></StyledDiv>
       </main>
     </>
   );
