@@ -58,8 +58,17 @@ export const StyledInputField = styled.input`
   padding: 10px 20px;
   margin: 2px 8px 15px 8px;
   border: none;
+  outline: none;
   border-radius: 1.5em;
   background-color: var(--accent-color-light);
+
+  // &:onblur:not(:placeholder-shown):invalid {
+  //   box-shadow: 0 0 5px 1px red;
+  // }
+
+  // &:focus:invalid {
+  //   box-shadow: none;
+  // }
 `;
 
 export const StyledTextArea = styled.textarea`
@@ -68,7 +77,17 @@ export const StyledTextArea = styled.textarea`
   padding: 10px 20px;
   margin: 8px;
   border: none;
+  outline: none;
+
   background-color: var(--accent-color-light);
+
+  // &:invalid {
+  //   box-shadow: 0 0 5px 1px red;
+  // }
+
+  // &:focus:invalid {
+  //   box-shadow: none;
+  // }
 `;
 
 export const StyledModalButton = styled.button`

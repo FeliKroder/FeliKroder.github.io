@@ -49,3 +49,37 @@ export const StyledContactButton = styled(Image)`
     background-color: var(--accent-color);
   }
 `;
+
+export const StyledItem = styled(Image)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 32vw;
+  max-width: 260px;
+  max-height: 260px;
+  object-fit: contain;
+  filter: drop-shadow(-30px 30px 6px rgb(0, 0, 0, 0.07));
+  ${({ $isWideItem }) =>
+    $isWideItem &&
+    css`
+      width: 28vw;
+      height: 13vw;
+      min-width: 180px;
+      min-height: 90px;
+      max-width: 250px;
+      max-height: 90px;
+      filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
+    `};
+  ${({ $isSmallItem }) =>
+    $isSmallItem &&
+    css`
+      width: 15vw;
+      height: 15vw;
+      min-width: 90px;
+      min-height: 90px;
+      max-width: 130px;
+      max-height: 130px;
+      filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
+    `};
+`;

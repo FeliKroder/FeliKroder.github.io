@@ -59,3 +59,9 @@ export const StyledOverlayText = styled.p`
       letter-spacing: 0.04em;
     `};
 `;
+
+export const StyledErrorMessage = styled.p`
+  color: red;
+  font-size: 0.8rem;
+  margin: -0.5em 0 1em 2em;
+`;
