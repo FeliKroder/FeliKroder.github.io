@@ -32,7 +32,7 @@ export default function ContactModal({}) {
     return trimmedInput.length >= minLength && regex.test(trimmedInput);
   }
 
-  const nameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
+  const nameRegex = /^[a-zA-ZäöüÄÖÜß]+(?: [a-zA-ZäöüÄÖÜß]+)*$/;
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
   const textRegex = /^.{10,}$/s;
@@ -101,7 +101,7 @@ export default function ContactModal({}) {
               Hast du eine Frage, oder möchtest du mich einfach kontaktieren?
               Dann schick mir eine Nachricht.
             </StyledText>
-            <StyledForm action="/./about" ref={form} onSubmit={sendEmail}>
+            <StyledForm ref={form} onSubmit={sendEmail}>
               <StyledLabel for="name">Name*</StyledLabel>
               <StyledInputField
                 type="text"
