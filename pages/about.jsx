@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
-  StyledItem,
   StyledItemBox,
   StyledItemContainer,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
+import { StyledItem } from "@/design-system/StyledImage";
 import {
   StyledOverlayText,
   StyledOverlayTextBox,
@@ -57,8 +57,8 @@ export default function Home() {
                 <StyledItem
                   src="/brain-red.png"
                   alt="Gehirn"
-                  width={4882}
-                  height={4882}
+                  width={260}
+                  height={260}
                   priority={true}
                 ></StyledItem>
               </StyledItemContainer>
@@ -67,8 +67,8 @@ export default function Home() {
                   $isWideItem
                   src="/Tea.png"
                   alt="Tee"
-                  width={4882}
-                  height={1692}
+                  width={260}
+                  height={260}
                   priority={true}
                 ></StyledItem>
               </StyledItemContainer>
@@ -77,8 +77,8 @@ export default function Home() {
                   $isSmallItem
                   src="/Heart.png"
                   alt="Anatomisches Herz"
-                  width={4882}
-                  height={4882}
+                  width={260}
+                  height={260}
                   priority={true}
                 ></StyledItem>
               </StyledItemContainer>
@@ -87,8 +87,8 @@ export default function Home() {
                   $isSmallItem
                   src="/Brokkoli-pink.png"
                   alt="Brokkoli"
-                  width={4882}
-                  height={4882}
+                  width={260}
+                  height={260}
                   priority={true}
                 ></StyledItem>
               </StyledItemContainer>
@@ -97,8 +97,8 @@ export default function Home() {
                   $isSmallItem
                   src="/Computer.png"
                   alt="Computer"
-                  width={4882}
-                  height={4882}
+                  width={260}
+                  height={260}
                   priority={true}
                 ></StyledItem>
               </StyledItemContainer>

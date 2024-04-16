@@ -58,8 +58,17 @@ export const StyledInputField = styled.input`
   padding: 10px 20px;
   margin: 2px 8px 15px 8px;
   border: none;
+  outline: none;
   border-radius: 1.5em;
   background-color: var(--accent-color-light);
+
+  // &:onblur:not(:placeholder-shown):invalid {
+  //   box-shadow: 0 0 5px 1px red;
+  // }
+
+  // &:focus:invalid {
+  //   box-shadow: none;
+  // }
 `;
 
 export const StyledTextArea = styled.textarea`
@@ -68,7 +77,17 @@ export const StyledTextArea = styled.textarea`
   padding: 10px 20px;
   margin: 8px;
   border: none;
+  outline: none;
+
   background-color: var(--accent-color-light);
+
+  // &:invalid {
+  //   box-shadow: 0 0 5px 1px red;
+  // }
+
+  // &:focus:invalid {
+  //   box-shadow: none;
+  // }
 `;
 
 export const StyledModalButton = styled.button`
@@ -78,10 +97,16 @@ export const StyledModalButton = styled.button`
   border: none;
   margin: 20px 8px 0 8px;
   background-color: var(--accent-color);
-  color: #f7f9ef;
+  color: var(--text-color-light);
   font-size: 0.8em;
   font-weight: 500;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: var(--secondary-color);
+  }
+
   ${({ $isCloseButton }) =>
     $isCloseButton &&
     css`
@@ -91,6 +116,5 @@ export const StyledModalButton = styled.button`
       margin-top: -14px;
       padding: 0.4em 0.8em 0.4em 0.8em;
       font-size: 1.1em;
-      color: var(--text-color);
     `};
 `;

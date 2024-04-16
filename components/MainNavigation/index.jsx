@@ -11,13 +11,11 @@ export default function MainNavigation() {
         <StyledNavigationBar>
           <StyledNavigationItem>
             <StyledLink href="/.">
-              {/* <svg></svg> */}
               <span>Work</span>
             </StyledLink>
           </StyledNavigationItem>
           <StyledNavigationItem>
             <StyledLink href="/./about">
-              {/* <svg></svg> */}
               <span>About</span>
             </StyledLink>
           </StyledNavigationItem>
@@ -27,7 +25,6 @@ export default function MainNavigation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* <svg></svg> */}
               <span>CV</span>
             </StyledLink>
           </StyledNavigationItem>
