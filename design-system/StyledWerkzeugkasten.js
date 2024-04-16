@@ -5,7 +5,7 @@ export const StyledWerkzeugkasten = styled.div`
   justify-content: center;
   width: auto;
   max-height: 350px;
-  margin: 14em 0 10em 0;
+  margin: 12em 0 10em 0;
 
   // border: solid 1px blue;
 

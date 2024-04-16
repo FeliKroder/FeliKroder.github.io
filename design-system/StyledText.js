@@ -55,14 +55,14 @@ export const StyledOverlayText = styled.p`
   letter-spacing: 0.08em;
   line-height: 180%;
   width: 100vw;
-  max-width: 60em;
+  max-width: 38em;
+
   // border: solid red 2px;
 
   ${({ $isAbout }) =>
     $isAbout &&
     css`
-      width: 40em;
-      padding: 0.5em 1.3em 0 1.3em;
+      padding: 0 1.3em 2em 1.3em;
       font-size: 0.9em;
       letter-spacing: 0.04em;
     `};

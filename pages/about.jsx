@@ -12,6 +12,7 @@ import {
   StyledOverlayTitle,
 } from "@/design-system/StyledText";
 import { StyledLamp } from "@/design-system/StyledImage";
+import { StyledDiv } from "@/design-system/StyledDiv";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
               Feli's Werkzeugkasten
             </StyledOverlayTitle>
             <StyledOverlayText $isAbout>
-              Du möchtest mehr über mich erfahren? Hover über die Elemente. Mein
+              Du möchtest mehr über mich erfahren? Klicke auf die Elemente. Mein
               Werkzeugkasten erzählt dir etwas über mich!
             </StyledOverlayText>
           </StyledOverlayTextBox>
@@ -105,6 +106,7 @@ export default function Home() {
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
+        <StyledDiv $isAbout></StyledDiv>
       </main>
     </>
   );
