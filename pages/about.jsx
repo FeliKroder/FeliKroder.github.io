@@ -50,10 +50,10 @@ export default function Home() {
             </StyledOverlayText>
           </StyledOverlayTextBox>
         </StyledContainer>
-        <StyledContainer>
+        <StyledContainer $isAbout>
           <StyledWerkzeugkasten>
-            <StyledItemBox>
-              <StyledItemContainer>
+            <StyledItemContainer>
+              <StyledItemBox>
                 <StyledItem
                   src="/brain-red.png"
                   alt="Gehirn"
@@ -61,8 +61,8 @@ export default function Home() {
                   height={260}
                   priority={true}
                 ></StyledItem>
-              </StyledItemContainer>
-              <StyledItemContainer $isWideItemContainer>
+              </StyledItemBox>
+              <StyledItemBox $isWideItemBox>
                 <StyledItem
                   $isWideItem
                   src="/Tea.png"
@@ -71,8 +71,8 @@ export default function Home() {
                   height={260}
                   priority={true}
                 ></StyledItem>
-              </StyledItemContainer>
-              <StyledItemContainer $isSmallItemContainer>
+              </StyledItemBox>
+              <StyledItemBox $isFirstSmallItemBox>
                 <StyledItem
                   $isSmallItem
                   src="/Heart.png"
@@ -81,8 +81,8 @@ export default function Home() {
                   height={260}
                   priority={true}
                 ></StyledItem>
-              </StyledItemContainer>
-              <StyledItemContainer $isSmallItemContainer>
+              </StyledItemBox>
+              <StyledItemBox $isSecondSmallItemBox>
                 <StyledItem
                   $isSmallItem
                   src="/Brokkoli-pink.png"
@@ -91,8 +91,8 @@ export default function Home() {
                   height={260}
                   priority={true}
                 ></StyledItem>
-              </StyledItemContainer>
-              <StyledItemContainer $isSmallItemContainer>
+              </StyledItemBox>
+              {/* <StyledItemBox $isSecondSmallItemBox>
                 <StyledItem
                   $isSmallItem
                   src="/Computer.png"
@@ -101,8 +101,8 @@ export default function Home() {
                   height={260}
                   priority={true}
                 ></StyledItem>
-              </StyledItemContainer>
-            </StyledItemBox>
+              </StyledItemBox> */}
+            </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
       </main>

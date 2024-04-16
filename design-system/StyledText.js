@@ -36,6 +36,14 @@ export const StyledOverlayTitle = styled.h2`
       font-weight: 500em;
       letter-spacing: 0.04em;
     `};
+
+    @media (max-width: 670px) {
+      ${({ $isAbout }) =>
+        $isAbout &&
+        css`
+          font-size: 1.4em;
+          padding: 0.8em 0 0.7em 0;
+        `};
 `;
 
 export const StyledOverlayText = styled.p`
@@ -58,6 +66,16 @@ export const StyledOverlayText = styled.p`
       font-size: 0.9em;
       letter-spacing: 0.04em;
     `};
+
+  @media (max-width: 670px) {
+    ${({ $isAbout }) =>
+      $isAbout &&
+      css`
+        width: 22em;
+        padding: 0 1.3em 5em 1.3em;
+        font-size: 0.8em;
+      `};
+  }
 `;
 
 export const StyledErrorMessage = styled.p`
