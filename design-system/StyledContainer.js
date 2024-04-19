@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -8,5 +8,4 @@ export const StyledContainer = styled.div`
 
   height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "80vh")};
   min-height: ${({ $isAbout }) => ($isAbout ? "10.5em" : "94vh")};
-  // border: solid 1px green;
 `;

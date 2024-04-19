@@ -13,8 +13,8 @@ export default function AboveTheFold() {
         <StyledMood
           src="/rosacloud.jpg"
           alt="Rosarote Wolkendecke"
-          width={2000}
-          height={2000}
+          width={2880}
+          height={2160}
           priority={true}
         ></StyledMood>
         <StyledOverlayTextBox>

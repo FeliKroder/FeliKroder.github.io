@@ -36,6 +36,56 @@ export const StyledOverlayTitle = styled.h2`
       font-weight: 500em;
       letter-spacing: 0.04em;
     `};
+
+    ${({ $isSprechblase }) =>
+      $isSprechblase &&
+      css`
+        position: absolute;
+        top: -80px;
+        left: -222px;
+        width: 240;
+        height: 310px;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        line-height: 120%;
+        text-align: left;
+      `};
+
+      ${({ $isSmallItem }) =>
+        $isSmallItem &&
+        css`
+          top: 202px;
+          left: 176px;
+          width: 160px;
+          height: 80px;
+        `};
+  
+    ${({ $isWideItem }) =>
+      $isWideItem &&
+      css`
+        top: -100px;
+        left: 316px;
+        width: 180px;
+        height: 80px;
+      `};
+  
+    @media (max-width: 670px) {
+      ${({ $isAbout }) =>
+        $isAbout &&
+        css`
+          width: 22em;
+          padding: 0 1.3em 5em 1.3em;
+          font-size: 0.8em;
+        `};
+    }
+
+    @media (max-width: 670px) {
+      ${({ $isAbout }) =>
+        $isAbout &&
+        css`
+          font-size: 1.4em;
+          padding: 0.8em 0 0.7em 0;
+        `};
 `;
 
 export const StyledOverlayText = styled.p`
@@ -48,16 +98,59 @@ export const StyledOverlayText = styled.p`
   line-height: 180%;
   width: 100vw;
   max-width: 60em;
+
   // border: solid red 2px;
 
   ${({ $isAbout }) =>
     $isAbout &&
     css`
-      width: 40em;
-      padding: 0.5em 1.3em 0 1.3em;
+      padding: 0 1.3em 2em 1.3em;
       font-size: 0.9em;
       letter-spacing: 0.04em;
+      max-width: 38em;
     `};
+
+  ${({ $isSprechblase }) =>
+    $isSprechblase &&
+    css`
+      position: absolute;
+      top: -55px;
+      left: -238px;
+      width: 240px;
+      height: 310px;
+      font-size: 0.8em;
+      letter-spacing: 0.02em;
+      line-height: 130%;
+      text-align: left;
+    `};
+
+  ${({ $isSmallItem }) =>
+    $isSmallItem &&
+    css`
+      top: 220px;
+      left: 160px;
+      width: 180px;
+      height: 80px;
+    `};
+
+  ${({ $isWideItem }) =>
+    $isWideItem &&
+    css`
+      top: -80px;
+      left: 300px;
+      width: 180px;
+      height: 80px;
+    `};
+
+  @media (max-width: 670px) {
+    ${({ $isAbout }) =>
+      $isAbout &&
+      css`
+        width: 22em;
+        padding: 0 1.3em 5em 1.3em;
+        font-size: 0.8em;
+      `};
+  }
 `;
 
 export const StyledErrorMessage = styled.p`
