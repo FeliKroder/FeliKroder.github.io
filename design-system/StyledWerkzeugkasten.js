@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Image from "next/image";
 
 export const StyledWerkzeugkasten = styled.div`
   display: flex;
@@ -50,12 +51,14 @@ export const StyledItemContainer = styled.div`
 
 export const StyledItemBox = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   grid-area: big;
   width: 320px;
   height: 320px;
   border-radius: 3.5em;
+  // border: solid 1px red;
   background-color: var(--primary-color);
   box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
   ${({ $isWideItemBox }) =>
@@ -78,23 +81,6 @@ export const StyledItemBox = styled.div`
       grid-area: secondSmall;
       width: 140px;
       height: 150px;
-    `};
-
-  ${({ $isAboutItem }) =>
-    $isAboutItem &&
-    css`
-      // grid-area: secondSmall;
-      box-shadow: none;
-
-      &:hover,
-      &:active {
-        width: 240px;
-        height: 150px;
-        box-shadow: none;
-        background-color: transparent;
-        border: solid 2px var(--secondary-color);
-        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
-      }
     `};
 
   @media (max-width: 670px) {

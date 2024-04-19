@@ -89,3 +89,43 @@ export const StyledItem = styled(Image)`
       `};
   }
 `;
+
+export const StyledSprechblase = styled(Image)`
+  position: absolute;
+  top: -180px;
+  left: -270px;
+  // z-index: -5;
+  width: 340px;
+  height: 340px;
+  transform: scaleX(-1);
+  // border-radius: 3.5em;
+  // border: solid 2px var(--secondary-color);
+  filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+  ${({ $isSmallItem }) =>
+    $isSmallItem &&
+    css`
+      top: 90px;
+      left: 100px;
+      // z-index: -5;
+      width: 240px;
+      height: 240px;
+      transform: scaleX(1) scaleY(-1);
+      // border-radius: 3.5em;
+      // border: solid 2px var(--secondary-color);
+      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+    `};
+
+  ${({ $isWideItem }) =>
+    $isWideItem &&
+    css`
+      top: -180px;
+      left: 220px;
+      // z-index: -5;
+      width: 280px;
+      height: 280px;
+      transform: scaleX(1);
+      // border-radius: 3.5em;
+      // border: solid 2px var(--secondary-color);
+      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+    `};
+`;
