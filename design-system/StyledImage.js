@@ -48,6 +48,10 @@ export const StyledContactButton = styled(Image)`
   &:active {
     background-color: var(--accent-color);
   }
+
+  @media (max-width: 670px) {
+    margin: 0 40px 60px 0;
+  }
 `;
 
 export const StyledItem = styled(Image)`
@@ -56,14 +60,16 @@ export const StyledItem = styled(Image)`
   width: 240px;
   object-fit: contain;
   filter: drop-shadow(-30px 30px 6px rgb(0, 0, 0, 0.07));
+  cursor: pointer;
+
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
       width: 240px;
       filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
     `};
-  ${({ $isSmallItem }) =>
-    $isSmallItem &&
+  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+    ($isFirstSmallItem || $isSecondSmallItem) &&
     css`
       height: 120px;
       width: 120px;
@@ -80,8 +86,8 @@ export const StyledItem = styled(Image)`
         width: 180px;
         filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
       `};
-    ${({ $isSmallItem }) =>
-      $isSmallItem &&
+    ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+      ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
         height: 80px;
         width: 80px;
@@ -92,8 +98,8 @@ export const StyledItem = styled(Image)`
 
 export const StyledSprechblase = styled(Image)`
   position: absolute;
-  top: -180px;
-  left: -270px;
+  top: -150px;
+  left: -80px;
   // z-index: -5;
   width: 340px;
   height: 340px;
@@ -101,15 +107,16 @@ export const StyledSprechblase = styled(Image)`
   // border-radius: 3.5em;
   // border: solid 2px var(--secondary-color);
   filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
-  ${({ $isSmallItem }) =>
-    $isSmallItem &&
+
+  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+    ($isFirstSmallItem || $isSecondSmallItem) &&
     css`
-      top: 90px;
-      left: 100px;
+      top: 55px;
+      left: -180px;
       // z-index: -5;
-      width: 240px;
-      height: 240px;
-      transform: scaleX(1) scaleY(-1);
+      width: 255px;
+      height: 255px;
+      transform: scaleX(-1) scaleY(-1);
       // border-radius: 3.5em;
       // border: solid 2px var(--secondary-color);
       filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
@@ -118,8 +125,8 @@ export const StyledSprechblase = styled(Image)`
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -180px;
-      left: 220px;
+      top: -150px;
+      left: 100px;
       // z-index: -5;
       width: 280px;
       height: 280px;
@@ -128,4 +135,56 @@ export const StyledSprechblase = styled(Image)`
       // border: solid 2px var(--secondary-color);
       filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
     `};
+
+  @media (max-width: 670px) {
+    position: absolute;
+    top: -90px;
+    left: -90px;
+    // z-index: -5;
+    width: 290px;
+    height: 340px;
+    transform: scaleX(-1);
+    // border-radius: 3.5em;
+    // border: solid 2px var(--secondary-color);
+    filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+
+    ${({ $isFirstSmallItem }) =>
+      $isFirstSmallItem &&
+      css`
+        top: 40px;
+        left: 40px;
+        z-index: 5;
+        width: 255px;
+        height: 255px;
+        transform: scaleX(1) scaleY(-1);
+        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      `};
+
+    ${({ $isSecondSmallItem }) =>
+      $isSecondSmallItem &&
+      css`
+        top: 20px;
+        left: -190px;
+        // z-index: -5;
+        width: 255px;
+        height: 255px;
+        transform: scaleX(-1) scaleY(-1);
+        // border-radius: 3.5em;
+        // border: solid 2px var(--secondary-color);
+        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      `};
+
+    ${({ $isWideItem }) =>
+      $isWideItem &&
+      css`
+        top: -110px;
+        left: 20px;
+        width: 240px;
+        height: 240px;
+        transform: scaleX(1);
+        // border-radius: 3.5em;
+        // border: solid 2px var(--secondary-color);
+        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      `};
+  }
 `;

@@ -37,55 +37,76 @@ export const StyledOverlayTitle = styled.h2`
       letter-spacing: 0.04em;
     `};
 
-    ${({ $isSprechblase }) =>
-      $isSprechblase &&
+  ${({ $isSprechblase }) =>
+    $isSprechblase &&
+    css`
+      position: absolute;
+      top: -50px;
+      left: -30px;
+      width: 240;
+      height: 310px;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      line-height: 120%;
+      text-align: left;
+    `};
+
+  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+    ($isFirstSmallItem || $isSecondSmallItem) &&
+    css`
+      top: 172px;
+      left: -129px;
+      width: 160px;
+      height: 80px;
+    `};
+
+  ${({ $isWideItem }) =>
+    $isWideItem &&
+    css`
+      top: -70px;
+      left: 197px;
+      width: 180px;
+      height: 80px;
+    `};
+
+  @media (max-width: 670px) {
+    top: 10px;
+    left: -60px;
+
+    ${({ $isAbout }) =>
+      $isAbout &&
       css`
-        position: absolute;
-        top: -80px;
-        left: -222px;
-        width: 240;
-        height: 310px;
-        text-transform: uppercase;
-        font-size: 0.9em;
-        line-height: 120%;
-        text-align: left;
+        width: 22em;
+        font-size: 1.4em;
+        padding: 0.8em 0 0.7em 0;
       `};
 
-      ${({ $isSmallItem }) =>
-        $isSmallItem &&
-        css`
-          top: 202px;
-          left: 176px;
-          width: 160px;
-          height: 80px;
-        `};
-  
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
-        top: -100px;
-        left: 316px;
+        top: -50px;
+        left: 100px;
         width: 180px;
         height: 80px;
       `};
-  
-    @media (max-width: 670px) {
-      ${({ $isAbout }) =>
-        $isAbout &&
-        css`
-          width: 22em;
-          padding: 0 1.3em 5em 1.3em;
-          font-size: 0.8em;
-        `};
-    }
 
-    @media (max-width: 670px) {
-      ${({ $isAbout }) =>
-        $isAbout &&
-        css`
-          font-size: 1.4em;
-          padding: 0.8em 0 0.7em 0;
-        `};
+    ${({ $isFirstSmallItem }) =>
+      $isFirstSmallItem &&
+      css`
+        top: 155px;
+        left: 125px;
+        width: 170px;
+        height: 90px;
+        // z-index: 5;
+      `};
+
+    ${({ $isSecondSmallItem }) =>
+      $isSecondSmallItem &&
+      css`
+        top: 140px;
+        left: -140px;
+      `};
+  }
 `;
 
 export const StyledOverlayText = styled.p`
@@ -114,41 +135,76 @@ export const StyledOverlayText = styled.p`
     $isSprechblase &&
     css`
       position: absolute;
-      top: -55px;
-      left: -238px;
+      top: -29px;
+      left: -46px;
       width: 240px;
       height: 310px;
-      font-size: 0.8em;
+      font-size: 0.75em;
       letter-spacing: 0.02em;
       line-height: 130%;
       text-align: left;
     `};
 
-  ${({ $isSmallItem }) =>
-    $isSmallItem &&
+  ${({ $isFirstSmallItem }) =>
+    $isFirstSmallItem &&
     css`
-      top: 220px;
-      left: 160px;
-      width: 180px;
-      height: 80px;
+      top: 190px;
+      left: -145px;
+      width: 170px;
+      height: 90px;
+    `};
+
+  ${({ $isSecondSmallItem }) =>
+    $isSecondSmallItem &&
+    css`
+      top: 190px;
+      left: -145px;
+      width: 170px;
+      height: 90px;
     `};
 
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -80px;
-      left: 300px;
+      top: -50px;
+      left: 180px;
       width: 180px;
       height: 80px;
     `};
 
   @media (max-width: 670px) {
+    top: 30px;
+    left: -75px;
+
     ${({ $isAbout }) =>
       $isAbout &&
       css`
         width: 22em;
         padding: 0 1.3em 5em 1.3em;
         font-size: 0.8em;
+      `};
+
+    ${({ $isWideItem }) =>
+      $isWideItem &&
+      css`
+        top: -30px;
+        left: 85px;
+        width: 170px;
+        height: 80px;
+      `};
+
+    ${({ $isFirstSmallItem }) =>
+      $isFirstSmallItem &&
+      css`
+        top: 175px;
+        left: 110px;
+      `};
+
+    ${({ $isSecondSmallItem }) =>
+      $isSecondSmallItem &&
+      css`
+        top: 160px;
+        left: -155px;
       `};
   }
 `;

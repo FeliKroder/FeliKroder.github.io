@@ -61,14 +61,14 @@ export default function Home() {
       imagePriority: true,
       bubbleTitle: "Mit Herz ",
       bubbleDescription:
-        "Alles was ich mache, mache ich mit Leidenschaft und Hingabe.",
+        "Alles, was ich mache, mache ich mit Leidenschaft und Hingabe.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
       bubbleHeight: 600,
       bubblePriority: true,
       isFirstSmallBox: true,
-      isSmallItem: true,
+      isFirstSmallItem: true,
     },
     {
       imageSrc: "/brokkoli.png",
@@ -85,7 +85,7 @@ export default function Home() {
       bubbleHeight: 600,
       bubblePriority: true,
       isSecondSmallBox: true,
-      isSmallItem: true,
+      isSecondSmallItem: true,
     },
   ];
 
@@ -155,43 +155,45 @@ export default function Home() {
                   <StyledItem
                     key={index}
                     $isWideItem={item.isWideItem}
-                    $isSmallItem={item.isSmallItem}
+                    $isFirstSmallItem={item.isFirstSmallItem}
+                    $isSecondSmallItem={item.isSecondSmallItem}
                     src={item.imageSrc}
                     alt={item.imageAlt}
                     width={item.imageWidth}
                     height={item.imageHeight}
                     priority={item.imagePriority}
                   />
-                  {isSprechblaseVisible &&
-                    selectedItem === index &&
-                    visualViewport.width >=
-                    (
-                      <>
-                        <StyledSprechblase
-                          $isWideItem={item.isWideItem}
-                          $isSmallItem={item.isSmallItem}
-                          src={item.bubbleSrc}
-                          alt={item.bubbleAlt}
-                          width={item.bubbleWidth}
-                          height={item.bubbleHeight}
-                          priority={item.bubblePriority}
-                        ></StyledSprechblase>
-                        <StyledOverlayTitle
-                          $isSprechblase
-                          $isSmallItem={item.isSmallItem}
-                          $isWideItem={item.isWideItem}
-                        >
-                          {item.bubbleTitle}
-                        </StyledOverlayTitle>
-                        <StyledOverlayText
-                          $isSprechblase
-                          $isSmallItem={item.isSmallItem}
-                          $isWideItem={item.isWideItem}
-                        >
-                          {item.bubbleDescription}
-                        </StyledOverlayText>
-                      </>
-                    )}
+                  {isSprechblaseVisible && selectedItem === index && (
+                    // {/* // visualViewport.width >= */}
+                    <>
+                      <StyledSprechblase
+                        $isWideItem={item.isWideItem}
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        src={item.bubbleSrc}
+                        alt={item.bubbleAlt}
+                        width={item.bubbleWidth}
+                        height={item.bubbleHeight}
+                        priority={item.bubblePriority}
+                      ></StyledSprechblase>
+                      <StyledOverlayTitle
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleTitle}
+                      </StyledOverlayTitle>
+                      <StyledOverlayText
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleDescription}
+                      </StyledOverlayText>
+                    </>
+                  )}
                 </StyledItemBox>
               ))}
 
