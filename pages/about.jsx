@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Image from "next/image";
 import Head from "next/head";
-// import Sprechblase from "@/components/Gedankenblase";
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
   StyledItemBox,
@@ -76,9 +74,9 @@ export default function Home() {
       imageWidth: 200,
       imageHeight: 200,
       imagePriority: true,
-      bubbleTitle: "Vitamine",
+      bubbleTitle: "Proudly Vegan",
       bubbleDescription:
-        "Ich ernähre mich rein pflanzlich und bin stolz drauf.",
+        "Ich ernähre mich rein pflanzlich, weil ich keine Tiere essen möchte.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
@@ -164,7 +162,6 @@ export default function Home() {
                     priority={item.imagePriority}
                   />
                   {isSprechblaseVisible && selectedItem === index && (
-                    // {/* // visualViewport.width >= */}
                     <>
                       <StyledSprechblase
                         $isWideItem={item.isWideItem}
@@ -196,47 +193,6 @@ export default function Home() {
                   )}
                 </StyledItemBox>
               ))}
-
-              {/* ´<StyledItemBox $isWideItemBox>
-                <StyledItem
-                  $isWideItem
-                  src="/Tea.png"
-                  alt="Tee"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox>
-              <StyledItemBox $isFirstSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Heart.png"
-                  alt="Anatomisches Herz"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox>
-              <StyledItemBox $isSecondSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Brokkoli-pink.png"
-                  alt="Brokkoli"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox> */}
-              {/* <StyledItemBox $isSecondSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Computer.png"
-                  alt="Computer"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox> */}
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>

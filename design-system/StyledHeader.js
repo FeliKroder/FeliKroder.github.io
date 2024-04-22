@@ -12,7 +12,7 @@ export const StyledHeader = styled.h2`
   text-transform: uppercase;
   letter-spacing: 0.15em;
 
-  @media (max-width: 428px) {
+  @media (max-width: 670px) {
     padding: 0 0 0 1.3em;
   }
 `;

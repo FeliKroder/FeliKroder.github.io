@@ -29,6 +29,7 @@ export const StyledOverlayTitle = styled.h2`
   padding: 0 0 0.82em 0;
   font-weight: bold;
   font-size: 2.8em;
+
   ${({ $isAbout }) =>
     $isAbout &&
     css`
@@ -43,7 +44,7 @@ export const StyledOverlayTitle = styled.h2`
       position: absolute;
       top: -50px;
       left: -30px;
-      width: 240;
+      width: 240px;
       height: 310px;
       text-transform: uppercase;
       font-size: 0.9em;
@@ -54,8 +55,8 @@ export const StyledOverlayTitle = styled.h2`
   ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
     ($isFirstSmallItem || $isSecondSmallItem) &&
     css`
-      top: 172px;
-      left: -129px;
+      top: 170px;
+      left: -139px;
       width: 160px;
       height: 80px;
     `};
@@ -70,13 +71,28 @@ export const StyledOverlayTitle = styled.h2`
     `};
 
   @media (max-width: 670px) {
-    top: 10px;
-    left: -60px;
+    top: 40px;
+    left: -40px;
+
+    ${({ $isSprechblase }) =>
+      $isSprechblase &&
+      css`
+        width: 220px;
+        height: 45px;
+        left: 0;
+        top: 45px;
+        font-size: 0.85em;
+        letter-spacing: 0.15em;
+        line-height: 120%;
+        font-size: 1em;
+        padding: 0 17px 0 20px;
+        transform: rotateY(180deg);
+        color: var(--text-color-light);
+      `};
 
     ${({ $isAbout }) =>
       $isAbout &&
       css`
-        width: 22em;
         font-size: 1.4em;
         padding: 0.8em 0 0.7em 0;
       `};
@@ -84,27 +100,33 @@ export const StyledOverlayTitle = styled.h2`
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
-        top: -50px;
-        left: 100px;
-        width: 180px;
-        height: 80px;
+        width: 220px;
+        height: 25px;
+        left: 0;
+        top: 30px;
+        font-size: 0.85em;
+        letter-spacing: 0.15em;
+        line-height: 120%;
+        font-size: 1em;
+        padding: 0 17px 0 32px;
+        transform: rotateY(180deg);
+        color: var(--text-color-light);
       `};
 
-    ${({ $isFirstSmallItem }) =>
-      $isFirstSmallItem &&
+    ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+      ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
-        top: 155px;
-        left: 125px;
-        width: 170px;
-        height: 90px;
-        // z-index: 5;
-      `};
-
-    ${({ $isSecondSmallItem }) =>
-      $isSecondSmallItem &&
-      css`
-        top: 140px;
-        left: -140px;
+        width: 220px;
+        height: 45px;
+        left: 0;
+        top: 55px;
+        font-size: 0.85em;
+        letter-spacing: 0.15em;
+        line-height: 120%;
+        font-size: 1em;
+        padding: 0 17px 0 25px;
+        transform: rotateY(180deg);
+        color: var(--text-color-light);
       `};
   }
 `;
@@ -145,21 +167,12 @@ export const StyledOverlayText = styled.p`
       text-align: left;
     `};
 
-  ${({ $isFirstSmallItem }) =>
-    $isFirstSmallItem &&
+  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+    ($isSecondSmallItem || $isFirstSmallItem) &&
     css`
       top: 190px;
-      left: -145px;
-      width: 170px;
-      height: 90px;
-    `};
-
-  ${({ $isSecondSmallItem }) =>
-    $isSecondSmallItem &&
-    css`
-      top: 190px;
-      left: -145px;
-      width: 170px;
+      left: -155px;
+      width: 190px;
       height: 90px;
     `};
 
@@ -173,8 +186,26 @@ export const StyledOverlayText = styled.p`
     `};
 
   @media (max-width: 670px) {
-    top: 30px;
-    left: -75px;
+    top: 65px;
+    left: -5px;
+    width: 220px;
+    z-index: 10;
+
+    ${({ $isSprechblase }) =>
+      $isSprechblase &&
+      css`
+        width: 220px;
+        height: 110px;
+        left: 0;
+        top: 92px;
+        font-size: 0.9em;
+        font-weight: 5;
+        letter-spacing: 0.07em;
+        line-height: 140%;
+        padding: 0 17px 0 20px;
+        transform: rotateY(180deg);
+        color: var(--text-color-light);
+      `};
 
     ${({ $isAbout }) =>
       $isAbout &&
@@ -187,26 +218,32 @@ export const StyledOverlayText = styled.p`
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
-        top: -30px;
-        left: 85px;
-        width: 170px;
-        height: 80px;
+        width: 220px;
+        height: 65px;
+        left: 0;
+        top: 55px;
+        font-size: 0.9em;
+        font-weight: 5;
+        letter-spacing: 0.07em;
+        line-height: 140%;
+        padding: 0 17px 0 32px;
+        transform: rotateY(180deg);
+        color: var(--text-color-light);
       `};
 
-    ${({ $isFirstSmallItem }) =>
-      $isFirstSmallItem &&
+    ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+      ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
-        top: 175px;
-        left: 110px;
+        width: 220px;
+        height: 110px;
+        left: 0;
+        top: 82px;
+        font-size: 0.9em;
+        font-weight: 5;
+        letter-spacing: 0.07em;
+        line-height: 140%;
+        padding: 0 17px 0 25px;
       `};
-
-    ${({ $isSecondSmallItem }) =>
-      $isSecondSmallItem &&
-      css`
-        top: 160px;
-        left: -155px;
-      `};
-  }
 `;
 
 export const StyledErrorMessage = styled.p`

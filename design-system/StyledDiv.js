@@ -19,6 +19,6 @@ export const StyledDiv = styled.div`
   @media (max-width: 670px) {
     height: 60px;
     padding: 1em 0 0 1.7em;
-    margin: 15em 0 0 0;
+    margin: 25em 0 0 0;
   }
 `;

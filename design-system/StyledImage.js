@@ -36,21 +36,28 @@ export const StyledContactButton = styled(Image)`
   padding: 0.7em;
   text-decoration: none;
   position: fixed;
-  bottom: 80px;
+  top: 620px;
   right: 20px;
   object-fit: contain;
   background-color: var(--secondary-color);
   border-radius: 2em;
-  box-shadow: 4px 4px 15px var(--secondary-color), 0.3;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
-  &:hover,
+  &:hover {
+    box-shadow: rgba(50, 50, 105, 0.35) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.15) 0px 1px 1px 0px;
+  }
+
   &:active {
-    background-color: var(--accent-color);
   }
 
   @media (max-width: 670px) {
-    margin: 0 40px 60px 0;
+    width: 50px;
+    height: 50px;
+    right: 12px;
   }
 `;
 
@@ -80,6 +87,8 @@ export const StyledItem = styled(Image)`
     width: 180px;
     object-fit: contain;
     filter: drop-shadow(-30px 30px 6px rgb(0, 0, 0, 0.07));
+    backface-visibility: hidden;
+
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
@@ -89,9 +98,7 @@ export const StyledItem = styled(Image)`
     ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
       ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
-        height: 80px;
-        width: 80px;
-        filter: drop-shadow(-25px 15px 6px rgb(0, 0, 0, 0.07));
+        height: 150px;
       `};
   }
 `;
@@ -100,12 +107,9 @@ export const StyledSprechblase = styled(Image)`
   position: absolute;
   top: -150px;
   left: -80px;
-  // z-index: -5;
   width: 340px;
   height: 340px;
   transform: scaleX(-1);
-  // border-radius: 3.5em;
-  // border: solid 2px var(--secondary-color);
   filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
 
   ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
@@ -113,12 +117,9 @@ export const StyledSprechblase = styled(Image)`
     css`
       top: 55px;
       left: -180px;
-      // z-index: -5;
       width: 255px;
       height: 255px;
       transform: scaleX(-1) scaleY(-1);
-      // border-radius: 3.5em;
-      // border: solid 2px var(--secondary-color);
       filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
     `};
 
@@ -127,64 +128,56 @@ export const StyledSprechblase = styled(Image)`
     css`
       top: -150px;
       left: 100px;
-      // z-index: -5;
       width: 280px;
       height: 280px;
       transform: scaleX(1);
-      // border-radius: 3.5em;
-      // border: solid 2px var(--secondary-color);
       filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
     `};
 
   @media (max-width: 670px) {
-    position: absolute;
-    top: -90px;
-    left: -90px;
-    // z-index: -5;
-    width: 290px;
-    height: 340px;
-    transform: scaleX(-1);
-    // border-radius: 3.5em;
-    // border: solid 2px var(--secondary-color);
-    filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+    // position: absolute;
+    // top: -10px;
+    // left: -90px;
+    // z-index: 5;
+    // width: 290px;
+    // height: 340px;
+    // transform: scaleX(-1) scaleY(-1);
+    // filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+    visibility: hidden;
 
     ${({ $isFirstSmallItem }) =>
       $isFirstSmallItem &&
       css`
-        top: 40px;
-        left: 40px;
-        z-index: 5;
-        width: 255px;
-        height: 255px;
-        transform: scaleX(1) scaleY(-1);
-        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+        // top: 40px;
+        // left: 40px;
+        // z-index: 5;
+        // width: 255px;
+        // height: 255px;
+        // transform: scaleX(1) scaleY(-1);
+        // filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
       `};
 
     ${({ $isSecondSmallItem }) =>
       $isSecondSmallItem &&
       css`
-        top: 20px;
-        left: -190px;
-        // z-index: -5;
-        width: 255px;
-        height: 255px;
-        transform: scaleX(-1) scaleY(-1);
-        // border-radius: 3.5em;
-        // border: solid 2px var(--secondary-color);
-        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+        // top: 20px;
+        // left: -190px;
+        // // z-index: -5;
+        // width: 255px;
+        // height: 255px;
+        // transform: scaleX(-1) scaleY(-1);
+        // filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
       `};
 
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
-        top: -110px;
-        left: 20px;
-        width: 240px;
-        height: 240px;
-        transform: scaleX(1);
-        // border-radius: 3.5em;
-        // border: solid 2px var(--secondary-color);
-        filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+        // top: -110px;
+        // left: 20px;
+        // width: 240px;
+        // height: 240px;
+        // transform: scaleX(1);
+        // filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
       `};
   }
 `;
