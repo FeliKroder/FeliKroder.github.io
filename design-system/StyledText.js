@@ -5,23 +5,23 @@ export const StyledOverlayTextBox = styled.div`
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 400px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;
-  max-width: 400px;
-
-  // border: solid 1px blue;
 
   ${({ $isAbout }) =>
     $isAbout &&
     css`
-      top: 25%;
+      top: 225px;
       width: 100vw;
-      padding: 17em 0 0 0;
-      padding: 1.6em 0 0 0;
-      position: absolute;
+      padding: 0.5em 0 0 0;
     `};
+
+  @media (max-width: 670px) {
+    height: 370px;
+    top: 180px;
+    padding: 2em 0 0 0;
+  }
 `;
 
 export const StyledOverlayTitle = styled.h2`
@@ -99,7 +99,7 @@ export const StyledOverlayText = styled.p`
   letter-spacing: 0.08em;
   line-height: 180%;
   width: 100vw;
-  max-width: 60em;
+  max-width: 59em;
 
   // border: solid red 2px;
 

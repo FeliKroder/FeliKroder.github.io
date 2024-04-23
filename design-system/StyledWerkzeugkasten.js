@@ -10,10 +10,10 @@ export const StyledWerkzeugkasten = styled.div`
   // border: solid 1px blue;
 
   @media (max-width: 670px) {
-    // border: solid 1px green;
     max-height: 880px;
     height: 900px;
-    margin: 8em 0 0 0;
+    padding: 1em 0 0 0;
+    margin: 7em 0 10em 0;
   }
 `;
 
@@ -33,14 +33,18 @@ export const StyledItemContainer = styled.div`
 
   @media (max-width: 670px) {
     width: 230px;
-    height: 880px;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px 105px 105px;
+    height: auto;
+
+    grid-template-columns: 1rf;
+    grid-template-rows: 1rf 1rf 1rf 1rf 1rf 1rf 1rf;
     grid-template-areas:
-      "big big"
-      "big big"
-      "wide wide"
-      "firstSmall secondSmall";
+      "big"
+      "big"
+      "wide"
+      "firstSmall"
+      "firstSmall"
+      "secondSmall"
+      "secondSmall";
     column-gap: 20px;
     row-gap: 20px;
     padding: 0 0 10em 0;
@@ -98,12 +102,12 @@ export const StyledItemBox = styled.div`
     width: 220px;
     height: 220px;
     // box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
-    rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    // rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
     transition: transform 0.7s;
     transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    
+
     &:hover{
     transform: rotateY(180deg); 
     transition: transform 1.2s;
@@ -113,20 +117,20 @@ export const StyledItemBox = styled.div`
     ${({ $isWideItemBox }) =>
       $isWideItemBox &&
       css`
+        grid-area: wide;
         height: 140px;
       `};
 
     ${({ $isFirstSmallItemBox }) =>
       $isFirstSmallItemBox &&
       css`
-        top: 35px;
+        grid-area: firstSmall;
       `};
 
     ${({ $isSecondSmallItemBox }) =>
       $isSecondSmallItemBox &&
       css`
-        top: 275px;
-        left: -120px;
+        grid-area: secondSmall;
       `};
       }
     `;

@@ -7,6 +7,7 @@ export const StyledMood = styled(Image)`
   // min-height: 29vw;
   height: 44em;
   max-height: 75vh;
+  min-height: 580px;
   object-fit: cover;
 `;
 
