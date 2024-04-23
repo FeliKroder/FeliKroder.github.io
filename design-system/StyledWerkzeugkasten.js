@@ -1,21 +1,19 @@
 import styled, { css } from "styled-components";
-import Image from "next/image";
 
 export const StyledWerkzeugkasten = styled.div`
   display: flex;
   justify-content: center;
-  width: auto;
+  width: 100vw;
   max-height: 350px;
   margin: 12em 0 10em 0;
 
   // border: solid 1px blue;
 
   @media (max-width: 670px) {
-    // border: solid 1px green;
-    max-height: 800px;
-    height: 480px;
-    width: auto;
-    margin: 8em 0 10em 0;
+    max-height: 880px;
+    height: 900px;
+    padding: 1em 0 0 0;
+    margin: 7em 0 10em 0;
   }
 `;
 
@@ -35,14 +33,18 @@ export const StyledItemContainer = styled.div`
 
   @media (max-width: 670px) {
     width: 230px;
-    height: 480px;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px 105px 105px;
+    height: auto;
+
+    grid-template-columns: 1rf;
+    grid-template-rows: 1rf 1rf 1rf 1rf 1rf 1rf 1rf;
     grid-template-areas:
-      "big big"
-      "big big"
-      "wide wide"
-      "firstSmall secondSmall";
+      "big"
+      "big"
+      "wide"
+      "firstSmall"
+      "firstSmall"
+      "secondSmall"
+      "secondSmall";
     column-gap: 20px;
     row-gap: 20px;
     padding: 0 0 10em 0;
@@ -58,9 +60,22 @@ export const StyledItemBox = styled.div`
   width: 320px;
   height: 320px;
   border-radius: 3.5em;
-  // border: solid 1px red;
-  background-color: var(--primary-color);
-  box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
+  
+  box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
+    rgba(00, 0, 0, 0.4) 0px 7px 13px -3px,
+    rgba(200, 30, 30, 0.35) 0px -3px 0px inset;
+
+  &:hover {
+    box-shadow: rgba(200, 30, 30, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(200, 30, 30, 0.2) 0px -3px 0px inset;
+  }
+
+  &:active {
+    box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px;
+    rgba(200, 30, 30, 0.5) 0px -3px 0px inset;
+  }
+
   ${({ $isWideItemBox }) =>
     $isWideItemBox &&
     css`
@@ -86,62 +101,66 @@ export const StyledItemBox = styled.div`
   @media (max-width: 670px) {
     width: 220px;
     height: 220px;
-    border-radius: 3.5em;
-    background-color: var(--primary-color);
-    box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
+    // box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
+    // rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+   
+    
+    &:hover{
+    transform: rotateY(180deg); 
+    transition: transform 1.2s;
+   
+    }
+
+
     ${({ $isWideItemBox }) =>
       $isWideItemBox &&
       css`
         grid-area: wide;
-        width: 220px;
-        height: 110px;
+        height: 140px;
       `};
+
     ${({ $isFirstSmallItemBox }) =>
       $isFirstSmallItemBox &&
       css`
         grid-area: firstSmall;
-        width: 100px;
-        height: 100px;
       `};
+
     ${({ $isSecondSmallItemBox }) =>
       $isSecondSmallItemBox &&
       css`
         grid-area: secondSmall;
-        width: 100px;
-        height: 100px;
+      `};
+      }
+    `;
+
+export const StyledCardBackside = styled.div`
+  @media (max-width: 670px) {
+    transform: rotateY(180deg);
+    background-color: var(--primary-color-dark);
+    width: 220px;
+    height: 220px;
+    border-radius: 3.5em;
+    box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
+      rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    ${({ $isWideItemBox }) =>
+      $isWideItemBox &&
+      css`
+        height: 140px;
       `};
   }
 `;
 
-// export const StyledItemBox = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 44vw;
-//   height: 44vw;
-//   max-width: 380px;
-//   max-height: 380px;
-//   border-radius: 3.5em;
-//   background-color: var(--primary-color);
-//   box-shadow: 11px 17px 30px rgb(200 30 30 / 0.4);
-//   ${({ $isWideItemContainer }) =>
-//     $isWideItemContainer &&
-//     css`
-//       width: 44vw;
-//       height: 23vw;
-//       min-width: 180px;
-//       min-height: 90px;
-//       max-width: 380px;
-//       max-height: 190px;
-//     `};
-//   ${({ $isSmallItemContainer }) =>
-//     $isSmallItemContainer &&
-//     css`
-//       width: 21vw;
-//       height: 21vw;
-//       min-width: 90px;
-//       min-height: 90px;
-//       max-width: 180px;
-//       max-height: 180px;
-//     `};
-// `;
+export const StyledCardBox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 670px) {
+    transform-style: preserve-3d;
+  }
+`;

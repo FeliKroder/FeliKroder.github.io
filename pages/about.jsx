@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Image from "next/image";
 import Head from "next/head";
-// import Sprechblase from "@/components/Gedankenblase";
 import { StyledContainer } from "@/design-system/StyledContainer";
 import {
   StyledItemBox,
   StyledItemContainer,
+  StyledCardBackside,
+  StyledCardBox,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
 import { StyledItem, StyledSprechblase } from "@/design-system/StyledImage";
@@ -13,6 +13,8 @@ import {
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
+  StyledCardText,
+  StyledCardTitle,
 } from "@/design-system/StyledText";
 import { StyledLamp } from "@/design-system/StyledImage";
 import { StyledDiv } from "@/design-system/StyledDiv";
@@ -61,14 +63,14 @@ export default function Home() {
       imagePriority: true,
       bubbleTitle: "Mit Herz ",
       bubbleDescription:
-        "Alles was ich mache, mache ich mit Leidenschaft und Hingabe.",
+        "Alles, was ich mache, mache ich mit Leidenschaft und Hingabe.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
       bubbleHeight: 600,
       bubblePriority: true,
       isFirstSmallBox: true,
-      isSmallItem: true,
+      isFirstSmallItem: true,
     },
     {
       imageSrc: "/brokkoli.png",
@@ -76,16 +78,16 @@ export default function Home() {
       imageWidth: 200,
       imageHeight: 200,
       imagePriority: true,
-      bubbleTitle: "Vitamine",
+      bubbleTitle: "Proudly Vegan",
       bubbleDescription:
-        "Ich ernähre mich rein pflanzlich und bin stolz drauf.",
+        "Ich ernähre mich rein pflanzlich, weil ich keine Tiere essen möchte.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
       bubbleHeight: 600,
       bubblePriority: true,
       isSecondSmallBox: true,
-      isSmallItem: true,
+      isSecondSmallItem: true,
     },
   ];
 
@@ -155,86 +157,71 @@ export default function Home() {
                   <StyledItem
                     key={index}
                     $isWideItem={item.isWideItem}
-                    $isSmallItem={item.isSmallItem}
+                    $isFirstSmallItem={item.isFirstSmallItem}
+                    $isSecondSmallItem={item.isSecondSmallItem}
                     src={item.imageSrc}
                     alt={item.imageAlt}
                     width={item.imageWidth}
                     height={item.imageHeight}
                     priority={item.imagePriority}
                   />
-                  {isSprechblaseVisible &&
-                    selectedItem === index &&
-                    visualViewport.width >=
-                    (
-                      <>
-                        <StyledSprechblase
-                          $isWideItem={item.isWideItem}
-                          $isSmallItem={item.isSmallItem}
-                          src={item.bubbleSrc}
-                          alt={item.bubbleAlt}
-                          width={item.bubbleWidth}
-                          height={item.bubbleHeight}
-                          priority={item.bubblePriority}
-                        ></StyledSprechblase>
-                        <StyledOverlayTitle
-                          $isSprechblase
-                          $isSmallItem={item.isSmallItem}
-                          $isWideItem={item.isWideItem}
-                        >
-                          {item.bubbleTitle}
-                        </StyledOverlayTitle>
-                        <StyledOverlayText
-                          $isSprechblase
-                          $isSmallItem={item.isSmallItem}
-                          $isWideItem={item.isWideItem}
-                        >
-                          {item.bubbleDescription}
-                        </StyledOverlayText>
-                      </>
-                    )}
+                  {isSprechblaseVisible && selectedItem === index && (
+                    <>
+                      <StyledSprechblase
+                        $isWideItem={item.isWideItem}
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        src={item.bubbleSrc}
+                        alt={item.bubbleAlt}
+                        width={item.bubbleWidth}
+                        height={item.bubbleHeight}
+                        priority={item.bubblePriority}
+                      ></StyledSprechblase>
+                      <StyledOverlayTitle
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleTitle}
+                      </StyledOverlayTitle>
+                      <StyledOverlayText
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleDescription}
+                      </StyledOverlayText>
+                    </>
+                  )}
+                  <StyledCardBox>
+                    <StyledCardBackside
+                      key={index}
+                      $isWideItemBox={item.isWideBox}
+                      $isFirstSmallItemBox={item.isFirstSmallBox}
+                      $isSecondSmallItemBox={item.isSecondSmallBox}
+                    >
+                      <StyledCardTitle
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleTitle}
+                      </StyledCardTitle>
+                      <StyledCardText
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleDescription}
+                      </StyledCardText>
+                    </StyledCardBackside>
+                  </StyledCardBox>
                 </StyledItemBox>
               ))}
-
-              {/* ´<StyledItemBox $isWideItemBox>
-                <StyledItem
-                  $isWideItem
-                  src="/Tea.png"
-                  alt="Tee"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox>
-              <StyledItemBox $isFirstSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Heart.png"
-                  alt="Anatomisches Herz"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox>
-              <StyledItemBox $isSecondSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Brokkoli-pink.png"
-                  alt="Brokkoli"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox> */}
-              {/* <StyledItemBox $isSecondSmallItemBox>
-                <StyledItem
-                  $isSmallItem
-                  src="/Computer.png"
-                  alt="Computer"
-                  width={260}
-                  height={260}
-                  priority={true}
-                ></StyledItem>
-              </StyledItemBox> */}
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
