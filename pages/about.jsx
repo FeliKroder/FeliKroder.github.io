@@ -4,6 +4,8 @@ import { StyledContainer } from "@/design-system/StyledContainer";
 import {
   StyledItemBox,
   StyledItemContainer,
+  StyledCardBackside,
+  StyledCardBox,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
 import { StyledItem, StyledSprechblase } from "@/design-system/StyledImage";
@@ -11,6 +13,8 @@ import {
   StyledOverlayText,
   StyledOverlayTextBox,
   StyledOverlayTitle,
+  StyledCardText,
+  StyledCardTitle,
 } from "@/design-system/StyledText";
 import { StyledLamp } from "@/design-system/StyledImage";
 import { StyledDiv } from "@/design-system/StyledDiv";
@@ -191,6 +195,31 @@ export default function Home() {
                       </StyledOverlayText>
                     </>
                   )}
+                  <StyledCardBox>
+                    <StyledCardBackside
+                      key={index}
+                      $isWideItemBox={item.isWideBox}
+                      $isFirstSmallItemBox={item.isFirstSmallBox}
+                      $isSecondSmallItemBox={item.isSecondSmallBox}
+                    >
+                      <StyledCardTitle
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleTitle}
+                      </StyledCardTitle>
+                      <StyledCardText
+                        $isSprechblase
+                        $isFirstSmallItem={item.isFirstSmallItem}
+                        $isSecondSmallItem={item.isSecondSmallItem}
+                        $isWideItem={item.isWideItem}
+                      >
+                        {item.bubbleDescription}
+                      </StyledCardText>
+                    </StyledCardBackside>
+                  </StyledCardBox>
                 </StyledItemBox>
               ))}
             </StyledItemContainer>

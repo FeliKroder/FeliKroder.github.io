@@ -87,6 +87,7 @@ export const StyledItem = styled(Image)`
     width: 180px;
     object-fit: contain;
     filter: drop-shadow(-30px 30px 6px rgb(0, 0, 0, 0.07));
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     ${({ $isWideItem }) =>
@@ -98,7 +99,8 @@ export const StyledItem = styled(Image)`
     ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
       ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
-        height: 150px;
+        height: 160px;
+        width: 160px;
       `};
   }
 `;

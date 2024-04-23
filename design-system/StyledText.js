@@ -12,6 +12,7 @@ export const StyledOverlayTextBox = styled.div`
   max-width: 400px;
 
   // border: solid 1px blue;
+
   ${({ $isAbout }) =>
     $isAbout &&
     css`
@@ -74,22 +75,6 @@ export const StyledOverlayTitle = styled.h2`
     top: 40px;
     left: -40px;
 
-    ${({ $isSprechblase }) =>
-      $isSprechblase &&
-      css`
-        width: 220px;
-        height: 45px;
-        left: 0;
-        top: 45px;
-        font-size: 0.85em;
-        letter-spacing: 0.15em;
-        line-height: 120%;
-        font-size: 1em;
-        padding: 0 17px 0 20px;
-        transform: rotateY(180deg);
-        color: var(--text-color-light);
-      `};
-
     ${({ $isAbout }) =>
       $isAbout &&
       css`
@@ -97,36 +82,10 @@ export const StyledOverlayTitle = styled.h2`
         padding: 0.8em 0 0.7em 0;
       `};
 
-    ${({ $isWideItem }) =>
-      $isWideItem &&
+    ${({ $isSprechblase }) =>
+      $isSprechblase &&
       css`
-        width: 220px;
-        height: 25px;
-        left: 0;
-        top: 30px;
-        font-size: 0.85em;
-        letter-spacing: 0.15em;
-        line-height: 120%;
-        font-size: 1em;
-        padding: 0 17px 0 32px;
-        transform: rotateY(180deg);
-        color: var(--text-color-light);
-      `};
-
-    ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
-      ($isFirstSmallItem || $isSecondSmallItem) &&
-      css`
-        width: 220px;
-        height: 45px;
-        left: 0;
-        top: 55px;
-        font-size: 0.85em;
-        letter-spacing: 0.15em;
-        line-height: 120%;
-        font-size: 1em;
-        padding: 0 17px 0 25px;
-        transform: rotateY(180deg);
-        color: var(--text-color-light);
+        visibility: hidden;
       `};
   }
 `;
@@ -185,27 +144,70 @@ export const StyledOverlayText = styled.p`
       height: 80px;
     `};
 
+    @media (max-width: 670px) {  
+      ${({ $isSprechblase }) =>
+        $isSprechblase &&
+        css`
+          visibility: hidden;
+        `};
+`;
+
+export const StyledCardTitle = styled.h2`
+  visibility: hidden;
+  position: absolute;
+  text-transform: uppercase;
+  line-height: 120%;
+
   @media (max-width: 670px) {
-    top: 65px;
-    left: -5px;
-    width: 220px;
-    z-index: 10;
+    top: 40px;
+    left: -40px;
+    visibility: visible;
+
+    ${({ $isAbout }) =>
+      $isAbout &&
+      css`
+        font-size: 1.4em;
+        padding: 0.8em 0 0.7em 0;
+      `};
 
     ${({ $isSprechblase }) =>
       $isSprechblase &&
       css`
-        width: 220px;
-        height: 110px;
         left: 0;
-        top: 92px;
-        font-size: 0.9em;
-        font-weight: 5;
-        letter-spacing: 0.07em;
-        line-height: 140%;
+        top: 45px;
+        letter-spacing: 0.15em;
+        font-size: 1em;
         padding: 0 17px 0 20px;
-        transform: rotateY(180deg);
         color: var(--text-color-light);
       `};
+
+    ${({ $isWideItem }) =>
+      $isWideItem &&
+      css`
+        width: 220px;
+        top: 27px;
+        padding: 0 17px 0 32px;
+      `};
+
+    ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
+      ($isFirstSmallItem || $isSecondSmallItem) &&
+      css`
+        width: 220px;
+        top: 55px;
+        padding: 0 17px 0 25px;
+      `};
+  }
+`;
+
+export const StyledCardText = styled.p`
+  visibility: hidden;
+
+  position: absolute;
+
+  @media (max-width: 670px) {
+    top: 65px;
+    left: -5px;
+    width: 220px;
 
     ${({ $isAbout }) =>
       $isAbout &&
@@ -215,35 +217,40 @@ export const StyledOverlayText = styled.p`
         font-size: 0.8em;
       `};
 
+    ${({ $isSprechblase }) =>
+      $isSprechblase &&
+      css`
+        left: 0;
+        top: 92px;
+        font-size: 0.9em;
+        font-weight: 5;
+        letter-spacing: 0.07em;
+        line-height: 140%;
+        padding: 0 17px 0 20px;
+        color: var(--text-color-light);
+        visibility: visible;
+      `};
+
     ${({ $isWideItem }) =>
       $isWideItem &&
       css`
         width: 220px;
         height: 65px;
-        left: 0;
         top: 55px;
         font-size: 0.9em;
         font-weight: 5;
         letter-spacing: 0.07em;
         line-height: 140%;
         padding: 0 17px 0 32px;
-        transform: rotateY(180deg);
-        color: var(--text-color-light);
       `};
 
     ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
       ($isFirstSmallItem || $isSecondSmallItem) &&
       css`
-        width: 220px;
-        height: 110px;
-        left: 0;
         top: 82px;
-        font-size: 0.9em;
-        font-weight: 5;
-        letter-spacing: 0.07em;
-        line-height: 140%;
         padding: 0 17px 0 25px;
       `};
+  }
 `;
 
 export const StyledErrorMessage = styled.p`

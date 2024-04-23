@@ -11,9 +11,9 @@ export const StyledWerkzeugkasten = styled.div`
 
   @media (max-width: 670px) {
     // border: solid 1px green;
-    max-height: 800px;
-    height: 480px;
-    margin: 8em 0 10em 0;
+    max-height: 880px;
+    height: 900px;
+    margin: 8em 0 0 0;
   }
 `;
 
@@ -33,7 +33,7 @@ export const StyledItemContainer = styled.div`
 
   @media (max-width: 670px) {
     width: 230px;
-    height: 480px;
+    height: 880px;
     grid-template-columns: 100px 100px;
     grid-template-rows: 100px 100px 105px 105px;
     grid-template-areas:
@@ -56,8 +56,6 @@ export const StyledItemBox = styled.div`
   width: 320px;
   height: 320px;
   border-radius: 3.5em;
-  // border: solid 1px red;
-  background-color: var(--primary-color);
   
   box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
     rgba(00, 0, 0, 0.4) 0px 7px 13px -3px,
@@ -99,46 +97,66 @@ export const StyledItemBox = styled.div`
   @media (max-width: 670px) {
     width: 220px;
     height: 220px;
-    border-radius: 3.5em;
-    background-color: var(--primary-color);
-    transition: transform 1s;
+    // box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
+    rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    transition: transform 0.7s;
     transform-style: preserve-3d;
-    box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
-    rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
-
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
     &:hover{
-      transform: rotateY( 180deg );
-      transition: transform 0.5s;
-      background-color:var(--primary-color-dark);
-          box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
-    rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    transform: rotateY(180deg); 
+    transition: transform 1.2s;
     }
 
 
     ${({ $isWideItemBox }) =>
       $isWideItemBox &&
       css`
-        grid-area: wide;
-        width: 220px;
         height: 140px;
       `};
+
     ${({ $isFirstSmallItemBox }) =>
       $isFirstSmallItemBox &&
       css`
-        grid-area: firstSmall;
         top: 35px;
-        width: 220px;
-        height: 220px;
       `};
 
     ${({ $isSecondSmallItemBox }) =>
       $isSecondSmallItemBox &&
       css`
-        grid-area: secondSmall;
         top: 275px;
         left: -120px;
-        width: 220px;
-        height: 220px;
       `};
+      }
+    `;
+
+export const StyledCardBackside = styled.div`
+  @media (max-width: 670px) {
+    transform: rotateY(180deg);
+    background-color: var(--primary-color-dark);
+    width: 220px;
+    height: 220px;
+    border-radius: 3.5em;
+    box-shadow: rgba(200, 30, 30, 0.5) 0px 2px 4px,
+      rgba(00, 0, 0, 0.4) 0px 7px 13px -3px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    ${({ $isWideItemBox }) =>
+      $isWideItemBox &&
+      css`
+        height: 140px;
+      `};
+  }
+`;
+
+export const StyledCardBox = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 670px) {
+    transform-style: preserve-3d;
   }
 `;
