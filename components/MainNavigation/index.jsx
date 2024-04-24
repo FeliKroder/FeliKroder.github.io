@@ -1,32 +1,26 @@
 import {
   StyledNavigationBar,
-  StyledNavigationItem,
+  StyledLinkName,
 } from "@/design-system/StyledMainNavigation";
-import { StyledLink } from "@/design-system/StyledLink";
+import { StyledNavigationItem } from "@/design-system/StyledLink";
 
 export default function MainNavigation() {
   return (
     <div>
       <nav aria-label="Mainnavigation">
         <StyledNavigationBar>
-          <StyledNavigationItem>
-            <StyledLink href="/.">
-              <span>Work</span>
-            </StyledLink>
+          <StyledNavigationItem href="/.">
+            <StyledLinkName>Work</StyledLinkName>
           </StyledNavigationItem>
-          <StyledNavigationItem>
-            <StyledLink href="/./about">
-              <span>About</span>
-            </StyledLink>
+          <StyledNavigationItem href="/./about">
+            <StyledLinkName>About</StyledLinkName>
           </StyledNavigationItem>
-          <StyledNavigationItem>
-            <StyledLink
-              href="/./FelicitasKroderResume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>CV</span>
-            </StyledLink>
+          <StyledNavigationItem
+            href="/./FelicitasKroderResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledLinkName>CV</StyledLinkName>
           </StyledNavigationItem>
         </StyledNavigationBar>
       </nav>

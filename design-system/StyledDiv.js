@@ -13,12 +13,12 @@ export const StyledDiv = styled.div`
     css`
       height: 1px;
       background-color: var(--premium-color);
-      margin: 30em 0 0 0;
+      // margin: 30em 0 0 0;
     `};
 
   @media (max-width: 670px) {
     height: 60px;
     padding: 1em 0 0 1.7em;
-    margin: 25em 0 0 0;
+    // margin: 2em 0 0 0;
   }
 `;
