@@ -22,7 +22,7 @@ import { StyledDiv } from "@/design-system/StyledDiv";
 export default function Home() {
   const items = [
     {
-      imageSrc: "/brain.png",
+      imageSrc: "/about-item/brain.png",
       imageAlt: "Gehirn",
       imageWidth: 260,
       imageHeight: 260,
@@ -40,7 +40,7 @@ export default function Home() {
     },
 
     {
-      imageSrc: "/tea.png",
+      imageSrc: "/about-item/tea.png",
       imageAlt: "Tee",
       imageWidth: 260,
       imageHeight: 260,
@@ -56,7 +56,7 @@ export default function Home() {
       isWideItem: true,
     },
     {
-      imageSrc: "/brokkoli.png",
+      imageSrc: "/about-item/brokkoli.png",
       imageAlt: "Brokkoli",
       imageWidth: 200,
       imageHeight: 200,
@@ -73,7 +73,7 @@ export default function Home() {
       isSecondSmallItem: true,
     },
     {
-      imageSrc: "/heart.png",
+      imageSrc: "/about-item/heart.png",
       imageAlt: "Anatomisches Herz",
       imageWidth: 200,
       imageHeight: 200,
