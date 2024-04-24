@@ -17,7 +17,6 @@ export const StyledModalContent = styled.div`
   top: 45%;
   left: 50%;
   padding: 1.5em 1em  1.5em  1em ;
-  backdrop-filter: blur(10px);
 
   background: linear-gradient(
     145deg,
