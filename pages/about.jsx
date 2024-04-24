@@ -124,7 +124,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <StyledContainer $isAbout>
+        <StyledContainer $isAboutHeader>
           <StyledOverlayTextBox $isAbout>
             <StyledLamp
               src="/neon.jpg"
@@ -225,7 +225,7 @@ export default function Home() {
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
-        <StyledDiv $isAboutFooter></StyledDiv>
+        {/* <StyledDiv $isAboutFooter></StyledDiv> */}
       </main>
     </>
   );

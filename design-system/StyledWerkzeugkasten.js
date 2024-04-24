@@ -5,15 +5,15 @@ export const StyledWerkzeugkasten = styled.div`
   justify-content: center;
   width: 100vw;
   max-height: 350px;
-  margin: 12em 0 10em 0;
+  // margin: 12em 0 10em 0;
 
   // border: solid 1px blue;
 
   @media (max-width: 670px) {
     max-height: 880px;
-    height: 900px;
-    padding: 1em 0 0 0;
-    margin: 7em 0 10em 0;
+    // height: 900px;
+    // padding: 1em 0 0 0;
+    // margin: 7em 0 10em 0;
   }
 `;
 
@@ -27,7 +27,6 @@ export const StyledItemContainer = styled.div`
     "big big wide wide"
     "big big firstSmall secondSmall";
   column-gap: 20px;
-  row-gap: 20px;
 
   // border: solid 5px pink;
 
@@ -47,7 +46,7 @@ export const StyledItemContainer = styled.div`
       "secondSmall";
     column-gap: 20px;
     row-gap: 20px;
-    padding: 0 0 10em 0;
+    // padding: 0 0 10em 0;
   }
 `;
 

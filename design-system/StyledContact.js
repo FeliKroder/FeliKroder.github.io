@@ -8,7 +8,6 @@ export const StyledModal = styled.div`
   height: 100vh;
   background-color: rgba(1, 1, 1, 0.32);
   backdrop-filter: blur(10px);
-  // opacity: 0.33;
 `;
 
 export const StyledModalContent = styled.div`

@@ -18,7 +18,7 @@ export const StyledOverlayTextBox = styled.div`
     `};
 
   @media (max-width: 670px) {
-    height: 370px;
+    // height: 370px;
     top: 180px;
     padding: 2em 0 0 0;
   }
@@ -74,6 +74,8 @@ export const StyledOverlayTitle = styled.h2`
   @media (max-width: 670px) {
     top: 40px;
     left: -40px;
+    padding: 10em 1.3em 0 1.3em;
+    font-size: 2em;
 
     ${({ $isAbout }) =>
       $isAbout &&
@@ -144,7 +146,16 @@ export const StyledOverlayText = styled.p`
       height: 80px;
     `};
 
-    @media (max-width: 670px) {  
+    @media (max-width: 670px) {
+      padding: 2em 1.3em 0 1.3em;
+      font-size:0.9em;
+
+      ${({ $isAbout }) =>
+        $isAbout &&
+        css`
+          padding: 0 1.3em 2em 1.3em;
+        `};
+
       ${({ $isSprechblase }) =>
         $isSprechblase &&
         css`
