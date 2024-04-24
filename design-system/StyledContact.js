@@ -8,10 +8,7 @@ export const StyledModal = styled.div`
   height: 100vh;
   background-color: rgba(1, 1, 1, 0.32);
   backdrop-filter: blur(10px);
-<<<<<<< Updated upstream
-=======
   z-index: 15;
->>>>>>> Stashed changes
 `;
 
 export const StyledModalContent = styled.div`
