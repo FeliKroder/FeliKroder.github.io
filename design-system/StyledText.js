@@ -187,7 +187,7 @@ export const StyledCardTitle = styled.h2`
         left: 0;
         top: 45px;
         letter-spacing: 0.15em;
-        font-size: 1em;
+        font-size: 0.95em;
         padding: 0 17px 0 20px;
         color: var(--text-color-light);
       `};

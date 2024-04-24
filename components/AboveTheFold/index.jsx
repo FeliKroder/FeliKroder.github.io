@@ -27,7 +27,7 @@ export default function AboveTheFold() {
             Ich legte die Weichen für meinen Berufung als Web Developerin.
           </StyledOverlayText>
           <StyledOverlayText $isBottomOverlayText>
-            Du möchtest mehr über mich erfahren?
+            Bald findest du hier meine Projekte
           </StyledOverlayText>
           <StyledArrow
             src="/Arrow_down.svg"

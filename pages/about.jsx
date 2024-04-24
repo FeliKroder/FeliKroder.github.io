@@ -56,31 +56,14 @@ export default function Home() {
       isWideItem: true,
     },
     {
-      imageSrc: "/about-item/brokkoli.png",
-      imageAlt: "Brokkoli",
-      imageWidth: 200,
-      imageHeight: 200,
-      imagePriority: true,
-      bubbleTitle: "Proudly Vegan",
-      bubbleDescription:
-        "Ich ernähre mich rein pflanzlich, weil ich keine Tiere essen möchte.",
-      bubbleSrc: "/Sprechblasen.svg",
-      bubbleAlt: "Sprechblase",
-      bubbleWidth: 600,
-      bubbleHeight: 600,
-      bubblePriority: true,
-      isSecondSmallBox: true,
-      isSecondSmallItem: true,
-    },
-    {
       imageSrc: "/about-item/heart.png",
       imageAlt: "Anatomisches Herz",
       imageWidth: 200,
       imageHeight: 200,
       imagePriority: true,
-      bubbleTitle: "Mit Herz ",
+      bubbleTitle: "Mit Herz",
       bubbleDescription:
-        "Alles, was ich mache, mache ich mit Leidenschaft und Hingabe.",
+        "In allem, was ich tue, steckt meine Hingabe und Leidenschaft.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
@@ -88,6 +71,23 @@ export default function Home() {
       bubblePriority: true,
       isFirstSmallBox: true,
       isFirstSmallItem: true,
+    },
+    {
+      imageSrc: "/about-item/brokkoli.png",
+      imageAlt: "Brokkoli",
+      imageWidth: 200,
+      imageHeight: 200,
+      imagePriority: true,
+      bubbleTitle: "Proudly Vegan",
+      bubbleDescription:
+        "Veganismus ist die beste Wahl für den Körper und unseren Planeten.",
+      bubbleSrc: "/Sprechblasen.svg",
+      bubbleAlt: "Sprechblase",
+      bubbleWidth: 600,
+      bubbleHeight: 600,
+      bubblePriority: true,
+      isSecondSmallBox: true,
+      isSecondSmallItem: true,
     },
   ];
 
@@ -137,7 +137,7 @@ export default function Home() {
               Feli's Werkzeugkasten
             </StyledOverlayTitle>
             <StyledOverlayText $isAbout>
-              Du möchtest mehr über mich erfahren? Klicke auf die Elemente. Mein
+              Du möchtest mehr über mich erfahren? Klicke auf die Tools. Mein
               Werkzeugkasten erzählt dir etwas über mich!
             </StyledOverlayText>
           </StyledOverlayTextBox>
