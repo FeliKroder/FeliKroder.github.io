@@ -37,7 +37,7 @@ export const StyledContactButton = styled(Image)`
   padding: 0.7em;
   text-decoration: none;
   position: fixed;
-  top: 620px;
+  top: 500px;
   right: 20px;
   object-fit: contain;
   background-color: var(--secondary-color);

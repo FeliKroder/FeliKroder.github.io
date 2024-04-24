@@ -3,16 +3,26 @@ import styled, { css } from "styled-components";
 export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
-  height: 80vh;
-  min-height: 94vh;
-  // align-items: center;
-  // overflow: hidden;
+  min-height: 100vh;
+  padding-bottom: 8em;
+
+  ${({ $isAboutHeader }) =>
+    $isAboutHeader &&
+    css`
+      height: 22em;
+      width: 100vw;
+      min-height: 30vh;
+    `}
+
+  @media(max-width: 670px) {
+    min-height: 25vh;
+  }
 
   ${({ $isAbout }) =>
     $isAbout &&
     css`
-      height: 10.5em;
-      min-height: 10.5em;
-      // width: 100%;
+      // height: 10.5em;
+      min-height: 60vh;
+      width: 100vw;
     `}
 `;

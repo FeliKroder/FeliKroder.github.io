@@ -56,23 +56,6 @@ export default function Home() {
       isWideItem: true,
     },
     {
-      imageSrc: "/heart.png",
-      imageAlt: "Anatomisches Herz",
-      imageWidth: 200,
-      imageHeight: 200,
-      imagePriority: true,
-      bubbleTitle: "Mit Herz ",
-      bubbleDescription:
-        "Alles, was ich mache, mache ich mit Leidenschaft und Hingabe.",
-      bubbleSrc: "/Sprechblasen.svg",
-      bubbleAlt: "Sprechblase",
-      bubbleWidth: 600,
-      bubbleHeight: 600,
-      bubblePriority: true,
-      isFirstSmallBox: true,
-      isFirstSmallItem: true,
-    },
-    {
       imageSrc: "/brokkoli.png",
       imageAlt: "Brokkoli",
       imageWidth: 200,
@@ -88,6 +71,23 @@ export default function Home() {
       bubblePriority: true,
       isSecondSmallBox: true,
       isSecondSmallItem: true,
+    },
+    {
+      imageSrc: "/heart.png",
+      imageAlt: "Anatomisches Herz",
+      imageWidth: 200,
+      imageHeight: 200,
+      imagePriority: true,
+      bubbleTitle: "Mit Herz ",
+      bubbleDescription:
+        "Alles, was ich mache, mache ich mit Leidenschaft und Hingabe.",
+      bubbleSrc: "/Sprechblasen.svg",
+      bubbleAlt: "Sprechblase",
+      bubbleWidth: 600,
+      bubbleHeight: 600,
+      bubblePriority: true,
+      isFirstSmallBox: true,
+      isFirstSmallItem: true,
     },
   ];
 
@@ -124,7 +124,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <StyledContainer $isAbout>
+        <StyledContainer $isAboutHeader>
           <StyledOverlayTextBox $isAbout>
             <StyledLamp
               src="/neon.jpg"
@@ -225,7 +225,7 @@ export default function Home() {
             </StyledItemContainer>
           </StyledWerkzeugkasten>
         </StyledContainer>
-        <StyledDiv $isAboutFooter></StyledDiv>
+        {/* <StyledDiv $isAboutFooter></StyledDiv> */}
       </main>
     </>
   );
