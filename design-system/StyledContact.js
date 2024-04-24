@@ -14,9 +14,11 @@ export const StyledModal = styled.div`
 export const StyledModalContent = styled.div`
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 45%;
   left: 50%;
-  padding: 2em 1.5em  2em  1.5em ;
+  padding: 1.5em 1em  1.5em  1em ;
+  backdrop-filter: blur(10px);
+
   background: linear-gradient(
     145deg,
     var(--accent-color-light),  var(--primary-color)); 
