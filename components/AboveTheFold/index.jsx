@@ -11,7 +11,7 @@ export default function AboveTheFold() {
     <div>
       <StyledContainer>
         <StyledMood
-          src="/rosacloud.jpg"
+          src="/background/rosacloud.jpg"
           alt="Rosarote Wolkendecke"
           width={2880}
           height={2160}
