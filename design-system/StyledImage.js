@@ -27,8 +27,14 @@ export const StyledArrow = styled(Image)`
   animation: jump 1.2s infinite;
 `;
 
-export const StyledLamp = styled(Image)`
+export const StyledWerkzeug = styled(Image)`
   margin: 4.5em 0 0.3em 0;
+  // min-width: 5vw;
+  width: 6.5vw;
+
+  @media (max-width: 670px) {
+    margin: 4.5em 26px 0.3em 0;
+  }
 `;
 
 export const StyledContactButton = styled(Image)`
@@ -109,28 +115,39 @@ export const StyledItem = styled(Image)`
 export const StyledSprechblase = styled(Image)`
   position: absolute;
   top: -150px;
-  left: -80px;
+  left: -15vw;
   width: 340px;
   height: 340px;
   transform: scaleX(-1);
-  filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+  filter: drop-shadow(8px 11px 2px rgb(0, 0, 0, 0.3));
 
-  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
-    ($isFirstSmallItem || $isSecondSmallItem) &&
+  ${({ $isFirstSmallItem }) =>
+    $isFirstSmallItem &&
     css`
-      top: 55px;
-      left: -180px;
+      top: 95px;
+      left: 4vw;
+      width: 255px;
+      height: 255px;
+      transform: scaleX(1) scaleY(-1);
+      filter: drop-shadow(-8px -11px 2px rgb(0, 0, 0, 0.3));
+    `};
+
+  ${({ $isSecondSmallItem }) =>
+    $isSecondSmallItem &&
+    css`
+      top: 75px;
+      left: -16.5vw;
       width: 255px;
       height: 255px;
       transform: scaleX(-1) scaleY(-1);
-      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      filter: drop-shadow(8px -11px 2px rgb(0, 0, 0, 0.3));
     `};
 
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -150px;
-      left: 100px;
+      top: -130px;
+      left: 18.5vw;
       width: 280px;
       height: 280px;
       transform: scaleX(1);
