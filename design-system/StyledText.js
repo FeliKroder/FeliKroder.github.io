@@ -171,7 +171,8 @@ export const StyledOverlayText = styled.p`
       ${({ $isAbout }) =>
         $isAbout &&
         css`
-          padding: 0 1.3em 2em 1.3em;
+          padding: 0 5em 0em 5em;
+          max-width: 33em;
         `};
 
       ${({ $isSprechblase }) =>

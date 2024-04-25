@@ -8,7 +8,11 @@ import {
   StyledCardBox,
   StyledWerkzeugkasten,
 } from "@/design-system/StyledWerkzeugkasten";
-import { StyledItem, StyledSprechblase } from "@/design-system/StyledImage";
+import {
+  StyledItem,
+  StyledSprechblase,
+  StyledWerkzeug,
+} from "@/design-system/StyledImage";
 import {
   StyledOverlayText,
   StyledOverlayTextBox,
@@ -126,13 +130,13 @@ export default function Home() {
       <main>
         <StyledContainer $isAboutHeader>
           <StyledOverlayTextBox $isAbout>
-            <StyledLamp
-              src="/neon.jpg"
-              alt="Lampe"
-              width={40}
-              height={40}
+            <StyledWerkzeug
+              src="/werkzeug.svg"
+              alt="Werkzeug-Icon"
+              width={50}
+              height={50}
               priority={true}
-            ></StyledLamp>
+            ></StyledWerkzeug>
             <StyledOverlayTitle $isAbout>
               Feli's Werkzeugkasten
             </StyledOverlayTitle>

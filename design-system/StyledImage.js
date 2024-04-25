@@ -27,8 +27,14 @@ export const StyledArrow = styled(Image)`
   animation: jump 1.2s infinite;
 `;
 
-export const StyledLamp = styled(Image)`
+export const StyledWerkzeug = styled(Image)`
   margin: 4.5em 0 0.3em 0;
+  // min-width: 5vw;
+  width: 6.5vw;
+
+  @media (max-width: 670px) {
+    margin: 4.5em 26px 0.3em 0;
+  }
 `;
 
 export const StyledContactButton = styled(Image)`
