@@ -109,17 +109,28 @@ export const StyledItem = styled(Image)`
 export const StyledSprechblase = styled(Image)`
   position: absolute;
   top: -150px;
-  left: -80px;
+  left: -15vw;
   width: 340px;
   height: 340px;
   transform: scaleX(-1);
   filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
 
-  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
-    ($isFirstSmallItem || $isSecondSmallItem) &&
+  ${({ $isFirstSmallItem }) =>
+    $isFirstSmallItem &&
     css`
-      top: 55px;
-      left: -180px;
+      top: 95px;
+      left: 4vw;
+      width: 255px;
+      height: 255px;
+      transform: scaleX(1) scaleY(-1);
+      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+    `};
+
+  ${({ $isSecondSmallItem }) =>
+    $isSecondSmallItem &&
+    css`
+      top: 75px;
+      left: -16.5vw;
       width: 255px;
       height: 255px;
       transform: scaleX(-1) scaleY(-1);
@@ -129,8 +140,8 @@ export const StyledSprechblase = styled(Image)`
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -150px;
-      left: 100px;
+      top: -130px;
+      left: 18.5vw;
       width: 280px;
       height: 280px;
       transform: scaleX(1);

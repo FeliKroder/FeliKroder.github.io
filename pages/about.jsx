@@ -24,8 +24,8 @@ export default function Home() {
     {
       imageSrc: "/about-item/brain.png",
       imageAlt: "Gehirn",
-      imageWidth: 260,
-      imageHeight: 260,
+      imageWidth: 240,
+      imageHeight: 240,
       imagePriority: true,
       bubbleTitle: "Ein saugfähiges Gehirn",
       bubbleDescription:
@@ -42,8 +42,8 @@ export default function Home() {
     {
       imageSrc: "/about-item/tea.png",
       imageAlt: "Tee",
-      imageWidth: 260,
-      imageHeight: 260,
+      imageWidth: 240,
+      imageHeight: 240,
       imagePriority: true,
       bubbleTitle: "Eine Tasse Tee",
       bubbleDescription: "Tee für innere Ruhe und eine bessere Konzentration.",
@@ -58,8 +58,8 @@ export default function Home() {
     {
       imageSrc: "/about-item/heart.png",
       imageAlt: "Anatomisches Herz",
-      imageWidth: 200,
-      imageHeight: 200,
+      imageWidth: 240,
+      imageHeight: 240,
       imagePriority: true,
       bubbleTitle: "Mit Herz",
       bubbleDescription:
@@ -75,8 +75,8 @@ export default function Home() {
     {
       imageSrc: "/about-item/brokkoli.png",
       imageAlt: "Brokkoli",
-      imageWidth: 200,
-      imageHeight: 200,
+      imageWidth: 240,
+      imageHeight: 240,
       imagePriority: true,
       bubbleTitle: "Proudly Vegan",
       bubbleDescription:

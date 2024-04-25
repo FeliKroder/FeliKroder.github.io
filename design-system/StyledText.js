@@ -43,8 +43,8 @@ export const StyledOverlayTitle = styled.h2`
     $isSprechblase &&
     css`
       position: absolute;
-      top: -50px;
-      left: -30px;
+      top: calc(-7% - 30px);
+      left: calc(14% - 15vw);
       width: 240px;
       height: 310px;
       text-transform: uppercase;
@@ -53,11 +53,20 @@ export const StyledOverlayTitle = styled.h2`
       text-align: left;
     `};
 
-  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
-    ($isFirstSmallItem || $isSecondSmallItem) &&
+  ${({ $isFirstSmallItem }) =>
+    $isFirstSmallItem &&
     css`
-      top: 170px;
-      left: -139px;
+      top: calc(141% - 0px);
+      left: calc(89px + 3.5vw);
+      width: 160px;
+      height: 80px;
+    `};
+
+  ${({ $isSecondSmallItem }) =>
+    $isSecondSmallItem &&
+    css`
+      top: calc(130% - 0px);
+      left: calc(41px - 16.5vw);
       width: 160px;
       height: 80px;
     `};
@@ -65,8 +74,8 @@ export const StyledOverlayTitle = styled.h2`
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -70px;
-      left: 197px;
+      top: calc(52% - 130px);
+      left: calc(90px + 18.5vw);
       width: 180px;
       height: 80px;
     `};
@@ -118,8 +127,8 @@ export const StyledOverlayText = styled.p`
     $isSprechblase &&
     css`
       position: absolute;
-      top: -29px;
-      left: -46px;
+      top: calc(0% - 30px);
+      left: calc(30px - 15vw);
       width: 240px;
       height: 310px;
       font-size: 0.75em;
@@ -128,20 +137,29 @@ export const StyledOverlayText = styled.p`
       text-align: left;
     `};
 
-  ${({ $isFirstSmallItem, $isSecondSmallItem }) =>
-    ($isSecondSmallItem || $isFirstSmallItem) &&
+  ${({ $isFirstSmallItem }) =>
+    $isFirstSmallItem &&
     css`
-      top: 190px;
-      left: -155px;
+      top: calc(155% - 0px);
+      left: calc(73px + 3.5vw);
       width: 190px;
       height: 90px;
     `};
 
+      ${({ $isSecondSmallItem }) =>
+        $isSecondSmallItem &&
+        css`
+          top: calc(145% - 0px);
+          left: calc(25px - 16.5vw);
+          width: 190px;
+          height: 90px;
+        `};
+
   ${({ $isWideItem }) =>
     $isWideItem &&
     css`
-      top: -50px;
-      left: 180px;
+      top: calc(67% - 130px);
+      left: calc(75px + 18.5vw);
       width: 180px;
       height: 80px;
     `};
