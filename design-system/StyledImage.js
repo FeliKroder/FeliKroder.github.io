@@ -113,7 +113,7 @@ export const StyledSprechblase = styled(Image)`
   width: 340px;
   height: 340px;
   transform: scaleX(-1);
-  filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+  filter: drop-shadow(8px 11px 2px rgb(0, 0, 0, 0.3));
 
   ${({ $isFirstSmallItem }) =>
     $isFirstSmallItem &&
@@ -123,7 +123,7 @@ export const StyledSprechblase = styled(Image)`
       width: 255px;
       height: 255px;
       transform: scaleX(1) scaleY(-1);
-      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      filter: drop-shadow(-8px -11px 2px rgb(0, 0, 0, 0.3));
     `};
 
   ${({ $isSecondSmallItem }) =>
@@ -134,7 +134,7 @@ export const StyledSprechblase = styled(Image)`
       width: 255px;
       height: 255px;
       transform: scaleX(-1) scaleY(-1);
-      filter: drop-shadow(-8px 11px 2px rgb(0, 0, 0, 0.3));
+      filter: drop-shadow(8px -11px 2px rgb(0, 0, 0, 0.3));
     `};
 
   ${({ $isWideItem }) =>
