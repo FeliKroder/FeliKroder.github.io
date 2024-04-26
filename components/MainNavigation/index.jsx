@@ -37,7 +37,7 @@ export default function MainNavigation() {
             <StyledLinkName>About</StyledLinkName>
           </StyledNavigationItem>
           <StyledNavigationItem
-            href="/./FelicitasKroderResume.pdf"
+            href="/./CV-Felicitas-Kroder.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

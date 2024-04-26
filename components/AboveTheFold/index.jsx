@@ -29,13 +29,13 @@ export default function AboveTheFold() {
           <StyledOverlayText $isBottomOverlayText>
             Bald findest du hier meine Projekte
           </StyledOverlayText>
-          <StyledArrow
+          {/* <StyledArrow
             src="/Arrow_down.svg"
             alt="Pfeil"
             width={40}
             height={40}
             priority={true}
-          ></StyledArrow>
+          ></StyledArrow> */}
         </StyledOverlayTextBox>
       </StyledContainer>
     </div>

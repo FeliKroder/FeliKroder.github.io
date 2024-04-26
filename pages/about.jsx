@@ -84,7 +84,7 @@ export default function Home() {
       imagePriority: true,
       bubbleTitle: "Proudly Vegan",
       bubbleDescription:
-        "Veganismus ist die beste Wahl für den Körper und unseren Planeten.",
+        "Ich finde, Veganismus ist die beste Wahl für Körper und Planeten.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,
