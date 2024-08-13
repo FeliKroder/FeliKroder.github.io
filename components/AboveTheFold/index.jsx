@@ -20,11 +20,14 @@ export default function AboveTheFold() {
         <StyledOverlayTextBox>
           <StyledOverlayTitle>Hi! Ich bin Feli</StyledOverlayTitle>
           <StyledOverlayText>
-            Vor langer Zeit kam ein smartes Baby in Köln auf die Welt. Das war
-            ich. 19 Jahre später begann ich eine Karriere als Designerin.
-            Weitere 16 Jahre später wagte ich den Sprung ins kalte Wasser.
-            <br />
-            Ich legte die Weichen für meinen Berufung als Web Developerin.
+            Vor 15 Jahren entwickelte ich das erste Mal mit HTML und CSS eine
+            eigene Webseite. Ganz ehrlich? Sie war schrecklich.... aber das
+            Programmieren fand ich super! Obwohl mein Berufsweg mich ins Design
+            führte, ließ mich der Gedanke nie los: „Ich will lernen, wie es
+            richtig geht!“ Vor einem Jahr habe ich meinen Mut zusammengenommen
+            und mein Berufsleben auf den Kopf gestellt. Und das Beste daran:
+            Viele Fertigkeiten und Erfahrungen aus meiner Design-Vergangenheit
+            helfen mir, eine bessere Programmierin zu sein.
           </StyledOverlayText>
           <StyledOverlayText $isBottomOverlayText>
             Bald findest du hier meine Projekte

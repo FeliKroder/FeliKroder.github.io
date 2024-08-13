@@ -82,9 +82,8 @@ export default function Home() {
       imageWidth: 240,
       imageHeight: 240,
       imagePriority: true,
-      bubbleTitle: "Proudly Vegan",
-      bubbleDescription:
-        "Ich finde, Veganismus ist die beste Wahl für Körper und Planeten.",
+      bubbleTitle: "Almost Vegan",
+      bubbleDescription: "Brokkoli fördert die Bildung neuer Nervenzellen.",
       bubbleSrc: "/Sprechblasen.svg",
       bubbleAlt: "Sprechblase",
       bubbleWidth: 600,

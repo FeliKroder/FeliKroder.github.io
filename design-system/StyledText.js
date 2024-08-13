@@ -65,8 +65,8 @@ export const StyledOverlayTitle = styled.h2`
   ${({ $isSecondSmallItem }) =>
     $isSecondSmallItem &&
     css`
-      top: calc(130% - 0px);
-      left: calc(41px - 16.5vw);
+      top: calc(133% - 0px);
+      left: calc(43px - 16.5vw);
       width: 160px;
       height: 80px;
     `};
@@ -149,8 +149,8 @@ export const StyledOverlayText = styled.p`
       ${({ $isSecondSmallItem }) =>
         $isSecondSmallItem &&
         css`
-          top: calc(145% - 0px);
-          left: calc(25px - 16.5vw);
+          top: calc(148% - 0px);
+          left: calc(28px - 16.5vw);
           width: 190px;
           height: 90px;
         `};
